@@ -12,41 +12,14 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-<!-- Load content plugin -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/loadcontent/plugin.js"></script>
-<!-- Animate plugin -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/animate/plugin.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
-
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-
-// PRESENTACIÓN
-<section>Slide 1</section>
-<section>Slide 2</section>
-<section>Slide 2
-<div data-animate data-load="animate/heart.svg">
-<!--
-{
-"setup": [
-{
-"element": "#heart",
-"modifier": "function() { this.animate(1500).ease('<>').scale(.9).loop(true,true);}"
-}
-]
-}
--->
-</div>
-
-</section>
-// FIN PRESENTACIÓN
-
-
+				<section>Slide 1</section>
+				<section>Slide 2</section>
 			</div>
 		</div>
-
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
@@ -58,10 +31,9 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-				animate:{autoplay: true // default is false
-				},
+
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealLoadContent, RevealAnimate ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
 	</body>
