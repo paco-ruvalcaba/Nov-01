@@ -52,24 +52,8 @@
 				data-separator-vertical="^\n"
 				data-separator-notes="^Note:">
 				<textarea data-template>
-[Skip to main content](#content)
-
-# [Introducción a la Programación](https://mpru.github.io/introprog/index.html "Guía de estudio - Lic. en Estadística - FCEyE - UNR"): Guía de estudio - Lic. en Estadística - FCEyE - UNR
-
-## Tabla de contenidos
-
-- [Bienvenida](https://mpru.github.io/introprog/index.html)
-- [1 Introducción a la Programación](https://mpru.github.io/introprog/introducci%C3%B3n-a-la-programaci%C3%B3n.html)
-- [2 Objetos y operadores](https://mpru.github.io/introprog/objetos-y-operadores.html)
-- [3 Estructuras de control](https://mpru.github.io/introprog/estructuras-de-control.html)
-- [4 Descomposición algorítmica](https://mpru.github.io/introprog/descomposici%C3%B3n-algor%C3%ADtmica.html)
-- [5 Estructuras de datos](https://mpru.github.io/introprog/estructuras-de-datos.html)
-- [6 Uso de archivos de datos](https://mpru.github.io/introprog/uso-de-archivos-de-datos.html)
-- [7 Otros tópicos](https://mpru.github.io/introprog/otros-t%C3%B3picos.html)
-- [Bibliografía](https://mpru.github.io/introprog/bibliograf%C3%ADa.html)
-
 # 1 Introducción a la Programación
-
+---
 ## 1.1 Qué es la programación
 
 Las computadoras son una parte esencial de nuestra vida cotidiana. Casi todos los aparatos que usamos tienen algún tipo de computadora capaz de ejecutar ciertas tareas: lavarropas con distintos modos de lavado, consolas de juegos para momentos de entretenimiento, calculadoras súper potentes, computadoras personales que se usan para un montón de propósitos, teléfonos celulares con un sinfín de aplicaciones y miles de cosas más.
@@ -83,7 +67,7 @@ Desafortunadamente, las computadoras no entienden español ni otro idioma humano
 Ahora bien, ¿por qué debemos estudiar programación en la Licenciatura en Estadística? La actividad de los profesionales estadísticos está atravesada en su totalidad por la necesidad de manejar con soltura herramientas informáticas que nos asisten en las distintas etapas de nuestra labor, desde la recolección y depuración de conjuntos de datos, pasando por la aplicación de distintas metodologías de análisis, hasta la comunicación efectiva de los resultados. Por eso, en la asignatura *Introducción a la Programación* estudiaremos los conceptos básicos de esta disciplina, fomentando la ejercitación del pensamiento abstracto y lógico necesario para poder entendernos hábilmente con la computadora y lograr que la misma realice las tareas que necesitamos.
 
 Para poner en práctica los conceptos sobre Programación que aprenderemos, vamos a emplear un lenguaje que ha sido desarrollado específicamente para realizar tareas estadísticas, llamado *R*. Sin embargo, debemos resaltar que éste no es un curso sobre R, es decir, no nos dedicaremos a aprender las herramientas que este lenguaje brinda para el análisis de datos. De hecho, frente a variados problemas vamos a dedicarnos a crear soluciones que ya existen y están disponibles en R, pero lo haremos con el fin de utilizar dicho lenguaje para aprender y ejercitar nociones básicas de programación.
-
+---
 ## 1.2 Una breve reseña histórica sobre la programación
 
 La historia de la programación está vinculada directamente con la de la computación. Esta palabra proviene del latín *computatio*, que deriva del verbo *computare*, cuyo significado es “enumerar cantidades”. Computación, en este sentido, designa la acción y efecto de computar, realizar una cuenta, un cálculo matemático. De allí que antiguamente computación fuese un término usado para referirse a los cálculos realizados por una persona con un instrumento expresamente utilizado para tal fin (como el ábaco, por ejemplo) o sin él. En este sentido, la computación ha estado presente desde tiempos ancestrales, sin embargo debemos remontarnos al siglo XVII para encontrar los primeros dispositivos diseñados para automatizar cómputos matemáticos.
@@ -132,7 +116,7 @@ Desde entonces, la computación ha evolucionado muy rápidamente, con la introdu
 <img width="337" height="253" src=":/ba7149ed08ee4ac5a3d9958ab94e35a2"/>
 
 Figura 1.5: De derecha a izquierda: un tubo de vacío, un transistor y un chip.
-
+---
 ## 1.3 Software y hardware
 
 Como podemos ver, en la historia de la computación hubo dos aspectos que fueron evolucionando: las máquinas y los programas que las dirigen. Hacemos referencia a estos elementos como *hardware* y *software* respectivamente, y es la conjunción de ambos la que le da vida a la computación y hace posible la programación.
@@ -167,7 +151,7 @@ Por otro lado tenemos al *software*, que es el conjunto de todos los programas (
 | Software de sistema o software base | Son los programas informáticos que están escritos en lenguaje de bajo nivel como el de máquina o ensamblador y cuyas instrucciones controlan de forma directa el hardware. | BIOS o UEFIs (sistemas que se encargan de operaciones básicas como el arranque del sistema, la configuración del hardware, etc), sistemas operativos (Linux, Windows, iOS, Android), controladores o *drivers*, etc. |
 | Software de aplicación o utilitario | Son los programas o aplicaciones que usamos habitualmente para realizar alguna tarea específica. | procesadores de texto como Word, reproductor de música, Whatsapp, Guaraní, navegadores web, juegos, etc. |
 | Software de programación o de desarrollo | Son los programas y entornos que nos permiten desarrollar nuestras propias herramientas de software o nuevos programas. Aquí se incluyen los lenguajes de programación. | C++, Java, Python, R, etc. |
-
+---
 ## 1.4 Problemas, algoritmos y lenguajes de programación
 
 Mencionamos anteriormente que la *programación* consistía en instruir a una computadora para que resuelva un problema y que la comunicación de esas instrucciones debe ser realizada de forma clara. Es por eso que, ante un problema que debe ser resuelto computacionalmente, el primer paso es pensar detalladamente cuál puede ser una forma de resolverlo, es decir, crear un *algoritmo*. Un *algoritmo* es una estrategia consistente de un conjunto ordenado de pasos que nos lleva a la solución de un problema o alcance de un objetivo. Luego, hay que traducir el algoritmo elegido al idioma de la computadora.
@@ -273,7 +257,7 @@ Además de los compiladores, para realizar este pasaje también existen los *int
 Concluyendo, gracias al concepto de la *abstracción* podemos escribir programas en un lenguaje que nos resulte fácil entender, y gracias al trabajo de los *compiladores* e *intérpretes* la computadora podrá llevar adelante las tareas necesarias.
 
 Cada una de las acciones que componen al algoritmo son codificadas con una o varias *instrucciones*, expresadas en el lenguaje de programación elegido, y el conjunto de todas ellas constituye un *programa*. El programa se guarda en un *archivo* con un nombre generalmente dividido en dos partes por un punto, por ejemplo: `mi_primer_programa.R`. La primera parte es la *raíz* del nombre con la cual podemos describir el contenido del archivo. La segunda parte es indicativa del uso del archivo, por ejemplo, `.R` indica que contiene un programa escrito en el lenguaje R. El proceso general de ingresar o modificar el contenido de un archivo se denomina *edición*.
-
+---
 ## 1.5 Errores de programación
 
 Apenas iniciemos nuestro camino en el mundo de la programación nos daremos cuenta que tendremos siempre ciertos compañeros de viaje: los *errores*. Muchas veces nos pasará que queremos ejecutar nuestro código y el mismo no anda o no produce el resultado esperado. No importa cuán cuidadosos seamos, ni cuánta experiencia tengamos, los errores están siempre presentes. Con el tiempo y práctica, vamos a poder identificarlos y corregirlos con mayor facilidad, pero probablemente nunca dejemos de cometerlos.
@@ -298,7 +282,7 @@ Los errores en la programación son tan comunes, que un científico de la comput
 <img width="337" height="253" src=":/6025d4044b92484680b9fdcbc382817a"/>
 
 Figura 1.11: Encontrando un bug en un programa.
-
+---
 ## 1.6 Procesador, ambiente y acciones
 
 Hemos definido a un algoritmo como una lista de instrucciones para resolver un problema. En este contexto, se entiende por *procesador* a todo agente capaz de comprender los pasos de un algoritmo y ejecutar el trabajo indicado por el mismo. Para cumplir con el objetivo, el procesador emplea ciertos recursos que tiene a disposición. Todos los elementos disponibles para ser utilizados por el procesador constituyen su *entorno* o *ambiente*. Cada una de las instrucciones que componen el algoritmo modifican el entorno de alguna manera y se denominan *acciones*.
@@ -371,168 +355,129 @@ REPETIR 6 VECES
 ```
 
 En el contexto de la resolución de un problema computacional, el *procesador* será la computadora; las acciones estarán dadas por las instrucciones disponibles en el lenguaje de programación utilizado o las que podamos crear en base al mismo; y el *ambiente* estará constituido por un conjunto de variables, estructuras de datos, funciones y otros elementos que serán de utilidad en la programación.
+---
+# ¿Cuáles son los lenguajes de programación?
 
-## 1.7 R y RStudio
 
-Como dijimos anteriormente, pondremos en práctica los conceptos sobre programación utilizando **R**, un lenguaje orientado a la realización de procesos estadísticos y gráficos. A diferencia de muchos otros, este es un software libre y gratuito: se distribuye bajo la licencia *GNU GPLv2* que establece la libertad de usarlo con cualquier propósito, de ver cómo fue hecho, cómo funciona y modificarlo, de distribuir copias y crear contribuciones y agregados para que estén disponibles para otros <sup>5</sup>.
+## **¿Qué son los lenguajes de programación?**
 
-Si bien R será nuestro medio de comunicación con la computadora, vamos a usar otro programa que brinda algunas herramientas para facilitar nuestro trabajo de programación, es decir, vamos a usar un **entorno de desarrollo integrado** (o *IDE*, por *integrated development environment*). Un IDE es un programa que hace que la codificación sea más sencilla porque permite manejar varios archivos de código, visualizar el *ambiente* de trabajo, utilizar resaltado con colores para distintas partes del código, emplear autocompletado para escribir más rápido, explorar páginas de ayuda, implementar estrategias de depuración e incluso intercalar la ejecución de instrucciones con la visualización de los resultados mientras avanzamos en el análisis o solución del problema. El IDE más popularmente empleado para programar con R es **RStudio** y será el programa que estaremos usando todo el tiempo.
+Son lenguajes que te permiten comunicarte con el ordenador para darle **instrucciones precisas** sobre lo que debe hacer en un momento en específico. 
 
-Para instalar estos programas, se debe visitar las páginas oficiales de [R](https://www.r-project.org/) y de [RStudio](https://www.rstudio.org/), descargar los instaladores y ejecutarlos. En este [enlace](https://www.youtube.com/watch?v=D9Bp11iZssc) se presenta un video con la instalación completa.
+Entonces, al igual que el inglés o el español, tiene una serie de sintaxis y reglas que deben seguirse al pie de la letra para **definir el** **tipo de datos, secuencia** y orden que le darás al ordenador. 
 
-### 1.7.1 Organización de RStudio
+En la actualidad existen cientos de lenguajes que se especializan más en una función que en otra. Así es como encontrarás códigos enfocados en **base de datos, desarrollo web** y orientados a objetos. 
 
-Cuando se abre RStudio se pueden visualizar cuatro paneles:
+¿En cuál te gustaría enfocarte? Échale un vistazo a toda la información que tenemos para ti:
 
-<img width="674" height="504" src=":/3e8b0dbd42a74048bc552ba093f33c05"/>
+## **3 Tipos de lenguajes de programación**
 
-Figura 1.12: Captura de pantalla de RStudio
+En estos momentos existen más de **800 lenguajes de programación** diferentes. Sin embargo, se dividen en tres diferentes tipos que marcan su funcionamiento y características. Saca papel y lápiz y descubre cuáles son: 
 
-- A la izquierda:
-    
-    - Arriba está el **editor de archivos**. Es el lugar donde escribiremos y editaremos nuestros programas, para luego guardarlos (una especie de *Bloc de Notas* o de un *Word* muy simple). La primera vez que se abre RStudio después de su instalación puede ser que este panel no esté presente, pero aparece si vamos a `File > New File > R Script`, con el atajo `Ctrl + Shift + N` o haciendo clic en el primer ícono de la barra de herramientas. Podemos abrir varios archivos a la vez.
-    - Abajo está la **consola**. Es la ventana que se comunica con R. A través de ella se envían las instrucciones a R para que las evalúe (también decimos, que las ejecute o corra) y se visualizan los resultados.
-- Arriba a la derecha hay un panel con algunas pestañas:
-    
-    - **Environment** (*ambiente*): muestra todos los elementos que componen al ambiente o entorno.
-    - **History** (*historial*): lista todas las instrucciones que R ha corrido anteriormente.
-    - **Otras más que no nos interesan por ahora**
-- Abajo a la derecha hay otro panel con más pestañas:
-    
-    - **Files**: explorador de archivos de la computadora
-    - **Plots**: ventana donde aparecen los gráficos si es que nuestro código produce alguno
-    - **Packages**: listado de los “paquetes” que tenemos instalados (ver más adelante)
-    - **Help**: manual de ayuda sobre todas las funciones de R
-    - **Viewer**: espacio para ver salidas de los programas con algún componente dinámico o interactivo.
+### 1\. **Lenguajes de bajo nivel**
 
-### 1.7.2 Uso de la consola
+Primero encontramos los **lenguajes de bajo nivel,** también conocidos como lenguajes máquina. Se trata del único que comprende el computador, así que todo lo que no sea un lenguaje de bajo nivel tendrá que **pasar por un proceso de transformación** para que el ordenador pueda entenderlo. 
 
-Podemos usar la consola de R que encontramos en el panel de la izquierda para introducir allí nuestras instrucciones y al hacer `Enter` serán evaluadas, produciendo algún resultado. Por ejemplo, podemos hacer algunos cálculos matemáticos como dividir, multiplicar, sumar, restar, calcular potencias, logaritmos, raíces y mucho más:
+Estos códigos se caracterizan por ser binarios, es decir, lo **componen 0 y 1.** Así fue como se desarrollaron los primeros lenguajes, pero la verdad es que no era nada práctico, con lo cual se crearon los siguientes proyectos. 
 
-```
-1 + 2
-```
+### 2\. **Lenguajes de medio nivel**
 
-```
-[1] 3
-```
+En segundo lugar tenemos los lenguajes de medio nivel, que son catalogados como de bajo nivel por algunos ya que siguen **siendo ensambladores,** o sea, que son entendidos por el ordenador pero están diseñados para ser escritos por los humanos. 
 
-```
-5 * 3
-```
+Sin embargo, un lenguaje de medio nivel tiene la capacidad de **crear tareas mucho más complejas** que los de bajo nivel, aunque siguen siendo poco ortodoxos en la actualidad. 
 
-```
-[1] 15
-```
+Estos lenguajes **se orientan hacia la** **programación de sistemas**, por lo que no son adecuados para actividades como el diseño web. 
 
-```
-[exp](https://rdrr.io/r/base/Log.html)(2)
-```
+### 3\. **Lenguajes de alto nivel**
 
-```
-[1] 7.389056
-```
+Por último tenemos los lenguajes de alto nivel, que son los que más **adaptados están hacia el lenguaje humano.** 
 
-```
-[sqrt](https://rdrr.io/r/base/MathFun.html)(100)
-```
+Al igual que los de nivel medio, tienen que atravesar un proceso de **transformación a lenguaje máquina** para que pueda ser ejecutado por un ordenador. 
 
-```
-[1] 10
-```
+Aquí ya no interviene un ensamblador, sino que se utilizan herramientas como **compiladores y traductores.** 
 
-```
-1 / 0
-```
+La buena noticia es que la mayoría de lenguajes que se utilizan en la actualidad son de alto nivel, así que en teoría son más fáciles de aprender. Aún así encontramos códigos como **C y C++** que son de mediano nivel y gozan de gran popularidad. 
 
-```
-[1] Inf
-```
+<img width="871" height="219" src=":/b5fde001c48b4c409ad9635dc54ed030"/>
 
-```
-(2 + 3i) * (3 + 6i)
-```
+## **Los 9 lenguajes de programación más usados en la actualidad**
 
-```
-[1] -12+21i
-```
+Ya te mencionamos que son muchos los lenguajes que existen en la actualidad. Ahora es momento de ver algunos de los más utilizados para que **empieces a aprender por tu cuenta:** 
 
-```
-1i ^ 2
-```
+### 1\. **HTML**
 
-```
-[1] -1+0i
-```
+Comenzamos por uno de los más utilizados en estos momentos. 
 
-Si bien podemos escribir nuestras instrucciones en la consola y dar `Enter` para que se ejecuten, en general queremos que queden escritas y guardadas en el archivo de código, por eso vamos a escribir nuestros programas en el panel de arriba a la izquierda. Una vez que escribimos una instrucción en el script, podemos *correrla* (es decir, enviarla a la consola para que se ejecute) haciendo clic en el ícono *Run* o con el atajo *Ctrl + Enter*. De esta forma, se *corre* la línea en la cual está el cursor o las líneas que hayamos seleccionado.
+HTML es un **lenguaje de marcado de documentos** usado para desarrollar sitios web. Cada comando que se organice se relacionará con la estructura y diseño que se mostrará en la página. 
 
-En todo lenguaje de programación existe un caracter especial que, al ser colocado al comienzo de una línea de código, le indica al software que dicha línea no debe ser evaluada. Esto se utiliza para incluir **comentarios**, es decir, líneas que expresan en español explicaciones o aclaraciones para nosotros mismos u otros que puedan utilizar nuestro código. También se utiliza para añadir encabezados con descripciones sobre el script, o indicar distintas secciones o partes en el programa. En R, este caracter especial es el símbolo numera (`#`). Si *corremos* líneas que empiezan con `#`, R no hará nada con ellas, las salteará. Por ejemplo
+En otras palabras, el navegador lee el documento con el lenguaje html y lo procesa **mediante un examen de elementos html** que tuviste que insertar en el archivo. Lo que hace que puedas crear un documento html con el bloc de notas de Windows, lo que te abre múltiples posibilidades. 
 
-```
-5^1
-```
+### **2\. SQL**
 
-```
-[1] 5
-```
+SQL es el lenguaje por excelencia para **administrar bases de datos**. Nos encanta el hecho de que te permite conectar tanto datos con fuentes de información como jerarquizarlos para **encontrar el que necesitas** en el menor tiempo posible. 
 
-```
-# 5^2
-5^3
-```
+En este sentido, su principal ventaja es que puedes **anexarlo a otros lenguajes de programación**, convirtiéndose en una herramienta súper útil para tus proyectos.
 
-```
-[1] 125
-```
+### 3\. **Java**
 
-### 1.7.3 Diseño del sistema R
+En pocas palabras, es el lenguaje más utilizado en la actualidad, por encima de **C o C++** por tres razones claves: sencillez, **solidez y facilidad de aprendizaje.** 
 
-R Se divide en dos partes:
+Lo mejor de todo es que puedes utilizarlo para una gran cantidad de tareas, desde diseño web en frontend como backend, **creación de aplicaciones móviles y de escritorio**, además de los servidores. 
 
-- La **base** (*R Base*), que se instala cuando descargamos el programa desde [CRAN](https://cran.r-project.org/) (“Comprehensive R Archive Network”). Contiene, entre otras cosas, una serie de herramientas básicas y fundamentales de R.
-    
-- **Paquetes adicionales**. Un paquete es un conjunto de archivos que se descarga de forma opcional desde CRAN u otros repositorios y que sirven para hacer alguna tarea especial. Por ejemplo, para poder hacer gráficos lindos, se puede usar un paquete que se llama `ggplot2`.
-    
+¿Tienes algún proyecto que quieres desarrollar? Aprende los fundamentos de java y **vuélvelo realidad.** 
 
-Como dijimos antes, en la pestaña *Packages* del panel de abajo a la derecha tiene el listado de todos los paquetes que ya están instalados (muchos vienen con R Base). Allí también hay un botón para instalar nuevos, aunque otra opción es correr la instrucción `install.packages("nombredelpaquete")`, por ejemplo, `install.packages("ggplot2")`. También es posible instalar paquetes publicados en otros repositorios<sup>6</sup>.
+### **4\. Javascript**
 
-Un paquete se instala una sola vez, pero cada vez que lo queramos usar debemos *cargarlo* para que las herramientas que trae queden a nuestra disposición. Eso se hace con la instrucción `[library("nombredelpaquete")](https://rdrr.io/r/base/library.html)`, por ejemplo, `[library("ggplot2")](https://ggplot2.tidyverse.org)`.
+Javascript es una variante de Java y se caracteriza porque puede ser utilizado **exclusivamente en el diseño web**, a diferencia de su antecesor. 
 
-## 1.8 Guía de estilo
+Es interesante saber que puede ser utilizado tanto para el diseño **frontend como backend**, así que puedes crear los objetos que se comunicarán directo con los usuarios o puedes **interactuar con el servidor** para desarrollar nuevas funcionalidades.
 
-Es sumamente importante mantener la prolijidad en la escritura tanto del pseudocódigo como de los programas, para facilitar la lectura de los mismos, especialmente cuando estamos trabajando con problemas largos. Siempre hay que tener en cuenta de que cuando escribimos un programa, tenemos dos públicos potenciales: integrantes de nuestro equipo de trabajo que tienen leer el código y hacer sus propios aportes y nosotros mismos en el futuro, cuando retomemos código hecho en el pasado y necesitemos interpretar qué es lo que hicimos hacer.
+### **5\. C**
 
-Es por eso que se establecen conjuntos de reglas para controlar y unificar la forma de escribir programas, que se conocen como **guía de estilo**. Estas reglas cubren aspectos como, por ejemplo, la forma de escribir comentarios en el código, la utilización de espacios o renglones en blanco, el formato de los nombres para los elementos que creamos nosotros mismos (como las funciones) y para los archivos que generamos, etc. Una *guía de estilo* no indica la única forma de escribir código, ni siquiera la forma correcta de hacerlo, sino que establece una convención para que todos trabajen de la misma forma, basándose en costumbres que sí se ha visto que pueden tener más ventajas que otras.
+Si ya tienes tiempo en el área, seguro que **habrás escuchado este término** en más de una ocasión.
 
-Por ejemplo, para programar en R, existe una guía de estilo llamada [The tidyverse style guide](https://style.tidyverse.org/), que es la que utilizan la gente de Google y de RStudio. En este curso vamos a adherir a sus recomendaciones. Si bien es una lectura muy interesante, particularmente si tenés intenciones de profundizar tus conocimientos sobre programación en R, no es necesario que lean dicha guía completa. Por ahora es suficiente con que imiten con atención el estilo que usamos en los ejemplos provistos en esta guía.
+Se trata del lenguaje de nivel medio más utilizado en estos momentos y **se caracteriza por ser fácil e intuitivo**, lo que es genial para cualquier programador novato. 
 
-Recordemos siempre que seguir un buen estilo para programar es como hacer uso de una correcta puntuación cuando escribimos, podemos entendernos sin ella, peroesmuchomasdificilleerloqueescribimossinolarespetamosno?
+En la actualidad, se utiliza para el **desarrollo de software** y apps de escritorio, así que si aprendes a usarlo tendrás muchas posibilidades a tu disposición. 
 
-[Bienvenida](https://mpru.github.io/introprog/index.html)
+### 6\. **C++**
 
-[2 Objetos y operadores](https://mpru.github.io/introprog/objetos-y-operadores.html)
+Es una variante del lenguaje C y tiene un **nivel de desarrollo superior** en comparación con su antecesor. Por eso es que te da la capacidad de crear plataformas de mayor complejidad, tanto en apps móviles como aplicaciones de escritorio. 
 
-## En esta página
+## ¡Únete al primer programa de Coding & Data para perfiles no técnicos!
 
-- [1 Introducción a la Programación](#introducci%C3%B3n-a-la-programaci%C3%B3n)
-- [1.1 Qué es la programación](#qu%C3%A9-es-la-programaci%C3%B3n)
-- [1.2 Una breve reseña histórica sobre la programación](#una-breve-rese%C3%B1a-hist%C3%B3rica-sobre-la-programaci%C3%B3n)
-- [1.3 Software y hardware](#software-y-hardware)
-- [1.4 Problemas, algoritmos y lenguajes de programación](#problemas-algoritmos-y-lenguajes-de-programaci%C3%B3n)
-    - [1.4.1 El diseño algorítmico](#el-dise%C3%B1o-algor%C3%ADtmico)
-    - [1.4.2 Codificación](#codificaci%C3%B3n)
-- [1.5 Errores de programación](#errores-de-programaci%C3%B3n)
-- [1.6 Procesador, ambiente y acciones](#procesador-ambiente-y-acciones)
-- [1.7 R y RStudio](#r-y-rstudio)
-    - [1.7.1 Organización de RStudio](#organizaci%C3%B3n-de-rstudio)
-    - [1.7.2 Uso de la consola](#uso-de-la-consola)
-    - [1.7.3 Diseño del sistema R](#dise%C3%B1o-del-sistema-r)
-- [1.8 Guía de estilo](#gu%C3%ADa-de-estilo)
+Descarga la info del programa: duración, tecnologías que vas a aprender, profesores… Y descubre si es para ti.
 
-"**Introducción a la Programación**: Guía de estudio - Lic. en Estadística - FCEyE - UNR" was written by Mgs. Lic. Marcos Prunello (Prof. Tit. Ord.). It was last built on 2023-06-13.
+[¡Descargar!](https://www.thepowermba.com/form/c4b_es_mql_dossier_blog.html?utm_source=blog&utm_content=%2Fes%2Fblog%2Fcuales-son-los-lenguajes-de-programacion&utm_medium=button-0)
 
-This book was built by the [bookdown](https://bookdown.org) R package.
+### Clases GRATIS
+
+## Aprender a programar es más fácil de lo que crees Todo depende de cómo te lo expliquen.
+
+[¡Prueba nuestras clases gratis!](https://www.thepowermba.com/form/rtc_es_mql_clases_blog.html?utm_source=blog&utm_content=%2Fes%2Fblog%2Fcuales-son-los-lenguajes-de-programacion&utm_medium=button-1)
+
+Además, te permite aplicar patrones de diseño en el código, lo que lo convierte en una herramienta fundamental en el **mundo del diseño gráfico.** 
+
+### 7\. **XML**
+
+Es un lenguaje de marcación que determina un conjunto de normas para la **codificación de documentos de todo tipo**. 
+
+Este tipo de lenguajes se utilizan en la mayoría de los casos para **analizar datos o leer documentos** hechos por ordenadores o seres humanos. De esta forma, XML te brinda un sitio para crear el formato que más te guste y generar un lenguaje personalizado. 
+
+En la actualidad xml proporciona una gran felicidad de uso, así que te da la posibilidad de usarlo en diferentes servicios web. 
+
+### **8\. PHP**
+
+Por su parte, php es un lenguaje que está orientado al **diseño backend de sitios web.** Lo interesante de este código es que es compatible con html, lo que te ayuda a facilitar la interconexión entre la **interfaz y el servidor de la página.** 
+
+Eso sí, tienes que tener presente que trabaja exclusivamente con la parte del servidor, así que podrás dar respuesta a todas las solicitudes que te hagan. 
+
+### 9\. **[Python](https://www.thepowermba.com/es/blog/python-el-lenguaje-de-programacion-mas-facil-de-aprender)**
+
+Mientras tanto, python es un lenguaje relativamente moderno y tiene un propósito general. Por lo tanto, puedes usarlo para cualquier tarea que necesite de un lenguaje de programación, desde creación de apps, manejo de base de datos y diseño web. 
+
+Lo mejor de todo es que su sintaxis es similar al inglés, por lo que no tendrás muchos problemas a la hora de aprenderlo. 
+
+<img width="871" height="658" src=":/e10a404e3f804805be51db679d045f25"/>
 <!-- <img src="linea.png" width="25%"> -->
 
  
