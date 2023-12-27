@@ -63,31 +63,33 @@ Todos estos dispositivos con computadoras de distinto tipo tienen algo en común
 La programación es un proceso creativo: en muchas ocasiones la tarea en cuestión puede cumplirse siguiendo distintos caminos y el programador es el que debe imaginar cuáles son y elegir uno. Algunos de estos caminos pueden ser mejores que otros, pero en cualquier caso la computadora se limitará a seguir las instrucciones ideadas por el programador.
 
 Desafortunadamente, las computadoras no entienden español ni otro idioma humano. Hay que pasarles las instrucciones en un lenguaje que sean capaces de entender. Para eso debemos aprender algún *lenguaje de programación*, que no es más que un lenguaje artificial compuesto por una serie de expresiones que la computadora puede interpretar. Las computadoras interpretan nuestras instrucciones de forma muy literal, por lo tanto a la hora de programar hay que ser muy específicos. Es necesario respetar las reglas del lenguaje de programación y ser claros en las indicaciones provistas.
-
-Ahora bien, ¿por qué debemos estudiar programación en la Licenciatura en Estadística? La actividad de los profesionales estadísticos está atravesada en su totalidad por la necesidad de manejar con soltura herramientas informáticas que nos asisten en las distintas etapas de nuestra labor, desde la recolección y depuración de conjuntos de datos, pasando por la aplicación de distintas metodologías de análisis, hasta la comunicación efectiva de los resultados. Por eso, en la asignatura *Introducción a la Programación* estudiaremos los conceptos básicos de esta disciplina, fomentando la ejercitación del pensamiento abstracto y lógico necesario para poder entendernos hábilmente con la computadora y lograr que la misma realice las tareas que necesitamos.
+<!-- Ahora bien, ¿por qué debemos estudiar programación en la Licenciatura en Estadística? La actividad de los profesionales estadísticos está atravesada en su totalidad por la necesidad de manejar con soltura herramientas informáticas que nos asisten en las distintas etapas de nuestra labor, desde la recolección y depuración de conjuntos de datos, pasando por la aplicación de distintas metodologías de análisis, hasta la comunicación efectiva de los resultados. Por eso, en la asignatura *Introducción a la Programación* estudiaremos los conceptos básicos de esta disciplina, fomentando la ejercitación del pensamiento abstracto y lógico necesario para poder entendernos hábilmente con la computadora y lograr que la misma realice las tareas que necesitamos. -->
 <!-- Para poner en práctica los conceptos sobre Programación que aprenderemos, vamos a emplear un lenguaje que ha sido desarrollado específicamente para realizar tareas estadísticas, llamado *R*. Sin embargo, debemos resaltar que éste no es un curso sobre R, es decir, no nos dedicaremos a aprender las herramientas que este lenguaje brinda para el análisis de datos. De hecho, frente a variados problemas vamos a dedicarnos a crear soluciones que ya existen y están disponibles en R, pero lo haremos con el fin de utilizar dicho lenguaje para aprender y ejercitar nociones básicas de programación. -->
 ---
 ## 1.2 Una breve reseña histórica sobre la programación
 
 La historia de la programación está vinculada directamente con la de la computación. Esta palabra proviene del latín *computatio*, que deriva del verbo *computare*, cuyo significado es “enumerar cantidades”. Computación, en este sentido, designa la acción y efecto de computar, realizar una cuenta, un cálculo matemático. De allí que antiguamente computación fuese un término usado para referirse a los cálculos realizados por una persona con un instrumento expresamente utilizado para tal fin (como el ábaco, por ejemplo) o sin él. En este sentido, la computación ha estado presente desde tiempos ancestrales, sin embargo debemos remontarnos al siglo XVII para encontrar los primeros dispositivos diseñados para automatizar cómputos matemáticos.
 
-En 1617 el matemático escocés John Napier (el mismo que definió los logaritmos) inventó un sistema conocido como *los huesos de Napier* o *huesos neperianos* que facilitaba la tarea de multiplicar, dividir y tomar raíces cuadradas, usando unas barras de hueso o marfil que tenían dígitos grabados. Esta fue la base para otras ideas más avanzadas, entre ellas la que dio origen a la primera calculadora mecánica, inventada por el alemán Wilhelm Schickard en 1623, capaz de realizar cómputos aritméticos sencillos funcionando a base de ruedas y engranajes. Se componía de dos mecanismos diferenciados, un ábaco de Napier de forma cilíndrica en la parte superior y un mecanismo en la inferior para realizar sumas parciales de los resultados obtenidos con el aparato de la parte superior. Fue llamado *reloj calculador*. A partir de aquí se fueron desarrollando otros modelos, todos ellos teniendo en común el hecho de ser puramente mecánicos, sin motores ni otras fuentes de energía. El operador ingresaba números ubicando ruedas de metal en posiciones particulares y al girarlas otras partes de la máquina se movían y mostraban el resultado. Algunos ejemplos son las calculadoras del inglés William Oughtred en 1624, de Blaise Pascal en 1645 (llamada *pascalina*), la de Samuel Morland en 1666 y las de Leibniz, en 1673 y 1694.
+En <mark>1617</mark> el matemático escocés John Napier (el mismo que definió los logaritmos) inventó un sistema conocido como *los huesos de Napier* o *huesos neperianos* que facilitaba la tarea de multiplicar, dividir y tomar raíces cuadradas, usando unas barras de hueso o marfil que tenían dígitos grabados. Esta fue la base para otras ideas más avanzadas, entre ellas la que dio origen a la primera calculadora mecánica, inventada por el alemán Wilhelm Schickard en 1623, capaz de realizar cómputos aritméticos sencillos funcionando a base de ruedas y engranajes.
 
-<img width="674" height="150" src=":/dab1b0ec564c495f81c920f76ef681d4"/>
+Se componía de dos mecanismos diferenciados, un ábaco de Napier de forma cilíndrica en la parte superior y un mecanismo en la inferior para realizar sumas parciales de los resultados obtenidos con el aparato de la parte superior. Fue llamado *reloj calculador*.
+
+A partir de aquí se fueron desarrollando otros modelos, todos ellos teniendo en común el hecho de ser puramente mecánicos, sin motores ni otras fuentes de energía. El operador ingresaba números ubicando ruedas de metal en posiciones particulares y al girarlas otras partes de la máquina se movían y mostraban el resultado. Algunos ejemplos son las calculadoras del inglés William Oughtred en 1624, de Blaise Pascal en 1645 (llamada *pascalina*), la de Samuel Morland en 1666 y las de Leibniz, en 1673 y 1694.
+
+<img width="674" height="150" src="dab1b0ec564c495f81c920f76ef681d4.png"/>
 
 Figura 1.1: De izquierda a derecha: los huesos de Napier (Museo Arqueológico Nacional de España), el reloj calculador de Schickard (Museo de la Ciencia de la Universidad Pública de Navarra) y una pascalina del año 1952
 
 El siglo XVIII trajo consigo algunos otros diseños, pero un gran salto se dio a comienzos del siglo XIX de mano de un tejedor y comerciante francés, Joseph Jacquard. En 1801 creó un telar que tenía un sistema de tarjetas perforadas para controlar las puntadas del tejido, de forma que fuera posible *programar* una gran diversidad de tramas y figuras. Sin saberlo, Jacquard sentó una idea fundamental para la creación de las computadoras.
 
-<img width="337" height="226" src=":/a3106d37b8684e57806ea7ecd2c95185"/>
-
+<img width="337" height="226" src="a3106d37b8684e57806ea7ecd2c95185.png"/>
 Figura 1.2: Un telar de Jacquard y sus tarjetas perforadas en el Museo de la ciencia y la industria en Mánchester.
 
 En 1822 el matemático británico Charles Babbage publicó un diseño para la construcción de una *máquina diferencial*, que podía calcular valores de funciones polinómicas mediante el método de las diferencias. Este complejo sistema de ruedas y engranajes era el primero que podía trabajar automáticamente utilizando resultados de operaciones previas. Si bien el diseño era viable, por motivos técnicos y económicos no lo pudo concretar (sólo construyó un modelo de menor escala). Sin embargo, Babbage no se dio por vencido y en 1837 presentó el diseño de una *máquina analítica*, un aparato capaz de ejecutar cualquier tipo de cálculo matemático y que, por lo tanto, se podría utilizar con cualquier propósito. Tal como el telar de Jacquard, la operación de esta máquina sería controlada por un patrón de perforaciones hechas sobre una tarjetas que la misma podría leer. Al cambiar el patrón de las perforaciones, se podría cambiar el comportamiento de la máquina para que resuelva diferentes tipos de cálculos. Para la salida de resultados, la máquina sería capaz de perforar tarjetas. Además, funcionaría con un motor a vapor y su tamaño hubiese sido de 30 metros de largo por 10 de ancho. Si bien Babbage tampoco llegó a concretar en vida este diseño que dejó plasmado en más de 300 dibujos y 2200 páginas por motivos políticos, se lo considera como la primera conceptualización de lo que hoy conocemos como computadora, por lo cual Babbage es conocido como *el padre de la computación*.
 
 En 1843 Lady Ada Lovelace, una matemática y escritora británica, publicó una serie de notas sobre la máquina analítica de Babbage, en las que resaltaba sus potenciales aplicaciones prácticas, incluyendo la descripción detallada de tarjetas perforadas para que sea capaz de calcular los números de Bernoulli. Al haber señalado los pasos para que la máquina pueda cumplir con estas y otras tareas, Ada es considerada actualmente como la primera programadora del mundo, a pesar de que en la época no fue tomada en serio por la comunidad científica, principalmente por su condición de mujer.
 
-<img width="674" height="228" src=":/3e98e021cbe8466cac511f6cb5aa968c"/>
+<img width="674" height="228" src="3e98e021cbe8466cac511f6cb5aa968c.png"/>
 
 Figura 1.3: Charles Babbage, Ada Lovelace y el algoritmo que publicó Ada para calcular los números de Bernoulli con la máquina analítica de Charles.
 
@@ -99,7 +101,7 @@ La primera computadora electrónica de propósito general fue la *ENIAC*, *Elect
 
 Ni la *ABC* ni la *ENIAC* eran reprogramables: la *ABC* servía el propósito específico de resolver sistemas de ecuaciones y la *ENIAC* era controlada conectando ciertos cables en un panel, lo que hacía muy compleja su programación. El siguiente gran avance se produjo en 1945, cuando el matemático húngaro-estadounidense John von Neumann (Universidad de Princeton) propuso que los programas, es decir, las instrucciones para que la máquina opere, y también los datos necesarios, podrían ser representados y guardados en una memoria electrónica interna. Así nació el concepto de *programa almacenado* (o *stored-program*), en contraposición con el uso de tableros de conexiones y mecanismos similares de los modelos vigentes. Los creadores de la ENIAC, bajo la consultoría de von Neumann, implementaron esto en el diseño de su sucesora, la *EDVAC*, terminada en 1949. También ya había experimentado con esta idea el alemán Konrad Zuse, quien entre 1937 y 1941 desarrolló la *Z3*, por lo cual es considerada por algunos como la primera máquina completamente automática y programable. En lugar de usar tubos de vacíos, empleaba un conjunto de 2600 relés, unos dispositivos electromagnéticos inventados en 1835 y empleados, por ejemplo, en telegrafía. El modelo original de la Z3 fue destruido en Berlín por un bombardeo durante la segunda guerra mundial.
 
-<img width="674" height="171" src=":/cc160063f157443ab9db0f3a1a5a789c"/>
+<img width="674" height="171" src="cc160063f157443ab9db0f3a1a5a789c.png"/>
 
 Figura 1.4: De izquierda a derecha: las computadoras ABC, ENIAC y Z3
 
@@ -112,7 +114,7 @@ Desde entonces, la computación ha evolucionado muy rápidamente, con la introdu
 - *Tercera generación* (aprox. 1964-1971): se inició en 1959 con el desarrollo de un circuito integrado (“chip”) que se trata de una pequeña placa de silicio sobre el cual se imprime un gran número de transistores conectados. La primera computadora de este estilo fue de IBM en 1960. Al ser más pequeñas y baratas, su uso llegó a una mayor audiencia. Se pudo interactuar con la máquina mediante teclados, monitores y un sistema operativo, que posibilitaba ejecutar múltiples acciones a la vez bajo el monitoreo de un programa central.
 - *Cuarta generación* (aprox. 1971-presente): los avances tecnológicos permitieron construir la unidad entera de procesamiento de una computadora sobre un único chip de silicio (*microprocesador*), incluyendo la memoria y los controles de entrada y salida de datos. Todo lo que en una computadora de la primera generación ocupaba una habitación entera, fue capaz de entrar en la palma de una mano. El primer microprocesador fue el Intel 4004 de 1971, mientras que la primera computadora de uso doméstico fue desarrollada por IBM en 1981. Surgieron también en esta generación el ratón (*mouse*) y las interfaces gráficas de usuario (como Windows, en 1985).
 
-<img width="337" height="253" src=":/ba7149ed08ee4ac5a3d9958ab94e35a2"/>
+<img width="337" height="253" src="ba7149ed08ee4ac5a3d9958ab94e35a2.png"/>
 
 Figura 1.5: De derecha a izquierda: un tubo de vacío, un transistor y un chip.
 ---
@@ -120,7 +122,7 @@ Figura 1.5: De derecha a izquierda: un tubo de vacío, un transistor y un chip.
 
 Como podemos ver, en la historia de la computación hubo dos aspectos que fueron evolucionando: las máquinas y los programas que las dirigen. Hacemos referencia a estos elementos como *hardware* y *software* respectivamente, y es la conjunción de ambos la que le da vida a la computación y hace posible la programación.
 
-<img width="337" height="169" src=":/28757f3808664af1a2c033572a57c598"/>
+<img width="337" height="169" src="28757f3808664af1a2c033572a57c598.png"/>
 
 Figura 1.6: Representación de la diferencia entre hardware y software.
 
@@ -207,7 +209,7 @@ Es importante destacar la presencia de sangrías (*sangrado*) en el ejemplo ante
 
 Los algoritmos suelen ser representados también mediante *diagramas de flujo*, como el que se muestra en la siguiente figura<sup>1</sup>.
 
-<img width="472" height="581" src=":/2e440ad840374ba1ae9cd64752096b4e"/>
+<img width="472" height="581" src="2e440ad840374ba1ae9cd64752096b4e.png"/>
 
 Figura 1.7: Ejemplo del algoritmo “Arrancar el auto” representado gráficamente con un diagrama de flujo.
 
@@ -219,7 +221,7 @@ Si bien hay distintos lenguajes de programación, una computadora en definitiva 
 
 Programar en lenguaje de máquina es muy complejo y lento, y es fácil cometer errores pero es difícil arreglarlos. Por eso a principios de la década de 1950 se inventaron los *lenguaje ensambladores*, que usan palabras para representar simbólicamente las operaciones que debe realizar la computadora. Cada una de estas palabras reemplaza un código de máquina binario, siendo un poco más fácil programar. Imaginemos que deseamos crear un programa que permita sumar dos números elegidos por una persona. La computadora puede hacer esto si se lo comunicamos mediante un mensaje compuesto por una larga cadena de ceros y unos (lenguaje de máquina) que a simple vista no podríamos entender. Sin embargo, escrito en lenguaje ensamblador, el programa se vería así (por ejemplo):
 
-<img width="674" height="255" src=":/073c2b0cac134b84aef9d8b80b7ab3a5"/>
+<img width="674" height="255" src="073c2b0cac134b84aef9d8b80b7ab3a5.png"/>
 
 Figura 1.8: Programa en lenguaje ensamblador para leer dos números, sumarlos y mostrar el resultado. Al final de cada línea hay una descripción de la operación realizada.
 
@@ -243,7 +245,7 @@ En programación, la idea de simplificar un proceso complejo ignorando algunas d
 - *Lenguajes de alto nivel de abstracción*: diseñados para que sea fácil para los humanos expresar los algoritmos sin necesidad de entender en detalle cómo hace exactamente el hardware para ejecutarlos. El lenguaje que utilizaremos en este taller, R, es de alto nivel. Son independientes del tipo de máquina.
 - *Lenguajes de nivel medio de abstracción*: son lenguajes con características mixtas entre ambos grupos anteriores.
 
-<img width="472" height="262" src=":/adbdbdb3d55948c9a9922302b201cd9f"/>
+<img width="472" height="262" src="adbdbdb3d55948c9a9922302b201cd9f.png"/>
 
 Figura 1.9: Distintos lenguajes de programación y sus logos.
 
@@ -263,7 +265,7 @@ Apenas iniciemos nuestro camino en el mundo de la programación nos daremos cuen
 
 A los errores en programación se los suele llamar *bugs* (insecto o bicho en inglés) y el proceso de la corrección de los mismos se conoce como *debugging* (depuración)<sup>4</sup>. Se dice que esta terminología proviene de 1947, cuando una computadora en la Universidad de Harvard (la *Mark II*) dejó de funcionar y finalmente se descubrió que la causa del problema era la presencia de una polilla en un relé electromagnético de la máquina. Sin embargo, otros historiadores sostienen que el término ya se usaba desde antes.
 
-<img width="472" height="372" src=":/f307b0aee7074ad38adbf4d9c1334cbb"/>
+<img width="472" height="372" src="f307b0aee7074ad38adbf4d9c1334cbb.png"/>
 
 Figura 1.10: La polilla (bug) encontrada por la científica de la computación Grace Hooper en la Mark II fue pegada con cinta en un reporte sobre el malfuncionamiento de la máquina.
 
@@ -278,7 +280,7 @@ A continuación se presenta una de las posibles clasificaciones de los errores q
 
 Los errores en la programación son tan comunes, que un científico de la computación muy reconocido, Edsger Dijkstra, dijo una vez: “si la depuración es el proceso de eliminar errores, entonces la programación es el proceso de generarlos”. Ante la presencia de uno, no hay más que respirar profundo y con paciencia revisar hasta encontrarlo y solucionarlo.
 
-<img width="337" height="253" src=":/6025d4044b92484680b9fdcbc382817a"/>
+<img width="337" height="253" src="6025d4044b92484680b9fdcbc382817a.png"/>
 
 Figura 1.11: Encontrando un bug en un programa.
 ---
@@ -396,7 +398,7 @@ Aquí ya no interviene un ensamblador, sino que se utilizan herramientas como **
 
 La buena noticia es que la mayoría de lenguajes que se utilizan en la actualidad son de alto nivel, así que en teoría son más fáciles de aprender. Aún así encontramos códigos como **C y C++** que son de mediano nivel y gozan de gran popularidad. 
 
-<img width="871" height="219" src=":/b5fde001c48b4c409ad9635dc54ed030"/>
+<img width="871" height="219" src="b5fde001c48b4c409ad9635dc54ed030.png"/>
 
 ## **Los 9 lenguajes de programación más usados en la actualidad**
 
@@ -476,7 +478,7 @@ Mientras tanto, python es un lenguaje relativamente moderno y tiene un propósit
 
 Lo mejor de todo es que su sintaxis es similar al inglés, por lo que no tendrás muchos problemas a la hora de aprenderlo. 
 
-<img width="871" height="658" src=":/e10a404e3f804805be51db679d045f25"/>
+<img width="871" height="658" src="e10a404e3f804805be51db679d045f25.png"/>
 <!-- <img src="linea.png" width="25%"> -->
 
  
