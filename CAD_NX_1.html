@@ -71,8 +71,36 @@ El modelado de modelos 3D en NX se basa en dos formas distintas:
 - Módulo
 
 Un modelo siempre es un componente individual, cerrado en sí mismo, de un subsistema o un sistema completo. Normalmente, el diseño de un modelo se inicia creando digitalmente un croquis 2D (boceto). Este croquis debe asignarse a un plano de referencia. Un plano de referencia determina la orientación en el espacio tridimensional. Los planos más sencillos y comunes se encuentran entre los ejes X e Y, los ejes Y y Z, y los ejes X y Z. Se muestran en la Figura.
+
+![Planos de referencia estándar en NX](screenshot.1072.jpg)
+
+Sin embargo, si se desea también pueden definirse planos de referencia específicos que sigan otras orientaciones. Una vez finalizados los croquis bidimensionales, hay que insertarlos en los planos correspondientes y modelarlos para transformarlos en un sólido tridimensional. En NX existe un gran número de posibilidades de moldeo, como la extrusión o el giro. En este módulo solo se utilizan funciones relevantes para la planta de clasificación.
+
+Pueden agruparse varios modelos para formar un subsistema o un módulo. Así, el sistema completo se obtiene agrupando los módulos y, si es necesario, otros modelos. A este respecto son importantes también la orientación y el posicionamiento en el espacio tridimensional. El modelo 3D resultante puede usarse posteriormente para la dinamización.
+
+La herramienta NX no es un simple sistema CAD 3D. Permite usar distintas aplicaciones accesibles a través de una misma interfaz. Entre ellas se cuentan las aplicaciones "Modeling" y "Mechatronics Concept Designer".
+
+En NX, el modelado se realiza exclusivamente en la aplicación "Modeling", como se muestra en la Figura.
+
+![Aplicación "Modeling" en NX con indicación de las zonas que se describen en el texto](screenshot.1073.jpg)
+
+Para crear la planta de clasificación se utilizan cuatro ventanas en el modo de diseño:
+
+- En la pantalla central (ver la Figura 3, zona 1) se encuentra el área de trabajo tridimensional. En ella se ejecutan todos los pasos de diseño necesarios, tanto en el ámbito bidimensional como en el tridimensional.
+- En la parte izquierda de la barra de menús (ver la Figura 3, zona 2) se encuentran todas las herramientas necesarias para la creación de bocetos bidimensionales.
+
+- En la parte central de la barra de menús (ver la Figura 3, zona 3) hay una lista de todos los elementos de forma. Estos permiten, en primer lugar, crear modelos tridimensionales a partir de bocetos bidimensionales. Además, permiten seguir moldeando los modelos tridimensionales ya creados, por ejemplo, redondeando aristas.
+- Con la barra de recursos (ver la Figura 3, zona 4) puede visualizarse el historial del modelo para hacer un seguimiento de los pasos de diseño ejecutados. Además, en ella pueden mostrarse también los distintos componentes individuales de un determinado módulo
+
+Tanto los modelos como los módulos se guardan en NX como piezas (parts) con la extensión de archivo ".prt". Para poder distinguir fácilmente a qué forma de modelado corresponde el archivo abierto en cada momento, es recomendable acordar unas convenciones de nombre unívocas.
+
+En caso de duda, cuando hay un archivo abierto dentro de la aplicación "Modeling" de NX, puede abrir el menú "Assembly Navigator (Navegador de módulos)" de la barra de recursos. En él se aplica la siguiente distinción:
+
+- Los modelos se guardan siempre con el icono . En este caso, solo puede tratarse de una pieza (ver la Figura 4, lado izquierdo).
+- Los módulos se representan con el icono . En este caso puede tratarse una combinación de varios modelos y módulos (ver la Figura 4, lado derecho)
+
 <!-- <img src="linea.png" width="25%"> -->
-				</textarea>
+				</textar>
 				</section>
 				
 				<!-- <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"> -->
