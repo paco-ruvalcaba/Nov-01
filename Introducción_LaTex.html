@@ -57,14 +57,14 @@
 - $T_EX$ es un programa destinado a la composición de documentos que contienen texto y fórmulas matemáticas con calidad de imprenta creado por Donald Knuth en 1978
 - Una imprenta y un impresor
 - NO es un editor de texto sino un procesador de <abbr title="En ciencias de la computación, macro ―acortamiento de macroinstrucción― es una serie de instrucciones que se almacenan para que se puedan ejecutar de manera secuencial mediante una sola llamada u orden de ejecución">macros</abbr> y lenguaje de programación
-
+---
 # ¿Qué es LaTeX?
 
 - LaTeX es un sistema de preparación de documentos.
 - Con él puedes preparar manuscritos, artículos de revista, cartas, tesis, presentaciones y cualquier tipo de documento que quisieras imprimir en papel o mostrar en pantalla.
 - $L^AT_EX$ es un conjunto de macros para $T_EX$ debido originalmente a Leslie Lamport para facilitar el uso de $T_EX$.
 - La Sociedad Matemática Americana añade sus estándares a $L^AT_EX$ : nace$\it{AMS}-L^AT_EX$
-
+---
 # ¿Por qué debería de usar LaTeX?
 
 - Existiendo otras alternativas más convencionales para producir documentos, como Word de Microsoft, es natural preguntarse porque debería uno tomarse la molestia de aprender a usar LaTeX.
@@ -74,69 +74,61 @@
 - Documentos de química, física, computación, biología, leyes, literatura, música, etc.
 - Excelente calidad de imprenta de LaTeX.
 
-Una ventaja menos obvia, pero quizá más importante, es que LaTeX te permite claramente separar el contenido y el formato de tu documento. Como científico, investigador o escritor, esto te da la oportunidad de concentrarte en el ‘qué’, en la parte creativa de tu obra, en generar y escribir ideas. Por su parte el sistema se encargará del ‘cómo’ hacer para plasmar esas ideas visualmente en un documento. LaTeX, además, realiza de manera automática muchas tareas que de otro modo podrían resultar tediosas o engorrosas: numerar capítulos y figuras, incluir y organizar la bibliografía adecuada, mantener índices y referencias cruzadas.
+Más importante
+- LaTeX te permite claramente separar el contenido y el formato de tu documento.
+- Como científico, investigador o escritor, esto te da la oportunidad de concentrarte en el ‘qué’, en la parte creativa de tu obra, en generar y escribir ideas.
+- Por su parte el sistema se encargará del ‘cómo’ hacer para plasmar esas ideas visualmente en un documento.
+- LaTeX, además, realiza de manera automática muchas tareas que de otro modo podrían resultar tediosas o engorrosas: numerar capítulos y figuras, incluir y organizar la bibliografía adecuada, mantener índices y referencias cruzadas.
 
-Finalmente, lo que para algunos es también un punto a favor, todo el software que necesitas para editar, producir, ver e imprimir tus documentos es libre. Esto además quiere decir, para los pragmáticos, que para instalar y usar LaTeX en tu computadora no tienes que gastar ni un sólo centavo.
-
+- Finalmente, lo que para algunos es también un punto a favor, todo el software que necesitas para editar, producir, ver e imprimir tus documentos es libre.
+- Esto además quiere decir, para los pragmáticos, que para instalar y usar LaTeX en tu computadora no tienes que gastar ni un sólo centavo.
+---
 # ¿Por qué no debería de usar LaTeX?
 
-El objetivo de esta guía es, por su puesto, el convencerte de darle una oportunidad e intentar aprender a usar LaTeX. Sin embargo es también útil conocer los casos en los que buscar otra alternativa pueda ser lo más recomendable.
-
 No uses LaTeX si:
+- **No tienes tiempo para aprenderlo.** No es recomendable tratar de aprender LaTeX para escribir un documento que tienes compromiso de entregar en menos de, digamos, 24 horas.
+- **Ya tienes tu documento escrito.** Es común, por ejemplo, que un estudiante quiera convertir su tesis, ya escrita en Word, al ‘formato’ de LaTeX para que se vea ‘más bonita’. Aunque técnicamente esto es posible, no lo recomiendo pues no es sencillo y los resultados suelen ser de muy mala calidad.
+- **LaTeX es mucho más que un ‘formato’** para guardar documentos, es una herramienta completa cuyas ventajas principales comienzan con en el proceso de crear el documento mismo.
 
-No tienes tiempo para aprenderlo. Antes de poder usar LaTeX, tienes que aprender a usar LaTeX. Estas páginas tratan de ayudarte, precisamente, a superar esa curva de aprendizaje de la manera más rápida posible. Aún así, no es recomendable tratar de aprender LaTeX para escribir un documento que tienes compromiso de entregar en menos de, digamos, 24 horas.
-
-Ya tienes tu documento escrito. Es común, por ejemplo, que un estudiante quiera convertir su tesis, ya escrita en Word, al ‘formato’ de LaTeX para que se vea ‘más bonita’. Aunque técnicamente esto es posible, no lo recomiendo pues no es sencillo y los resultados suelen ser de muy mala calidad. LaTeX es mucho más que un ‘formato’ para guardar documentos, es una herramienta completa cuyas ventajas principales comienzan con en el proceso de crear el documento mismo.
-
-Lo que te interesa es el diseño de documentos. Si tu interés, más que en el contenido está en el diseño visual de los documentos, LaTeX quizá no es la herramienta adecuada para ti. No por esto quiero espantar a los diseñadores y decirles que no deberían de usar LaTeX, ¡LaTeX necesita también de diseñadores y de tipógrafos! Sin embargo no recomiendo usar LaTeX como una herramienta de diseño, más bien como una plataforma que los diseñadores podrían usar para crear ‘plantillas’ para documentos con sus propios diseños.
+- **Lo que te interesa es el diseño de documentos.** Si tu interés, más que en el contenido está en el diseño visual de los documentos, LaTeX quizá no es la herramienta adecuada para ti. LaTeX como una herramienta de diseño, más bien como una plataforma que los diseñadores podrían usar para crear ‘plantillas’ para documentos con sus propios diseños.
+---
 # ¿Cómo consigo LaTeX?
 
 Según tu sistema operativo lee las instrucciones para Windows, Mac OS X, o Linux. Cualquiera que sea tu sistema vas a necesitar, esencialmente, de los siguientes tres componentes:
+- Un editor de texto. 
+- Una distribución de LaTeX. Este es el motor que se encarga de convertir tu archivos fuente de LaTeX en documentos portables .pdf.
+- Un visor de documentos. Esta es la aplicación que te permite ver e imprimir tus documentos generados por LaTeX.
+---
+# ¿Cómo uso LaTeX?
 
-Un editor de texto. Es la aplicación interactiva que usas para escribir documentos .tex. Cualquier editor de texto simple te sirve, pero editores especializados en LaTeX te pueden ofrecer rápido acceso a los comandos más comunes para procesar y ver los documentos que generas.
-
-Una distribución de LaTeX. Este es el motor que se encarga de convertir tu archivos fuente de LaTeX en documentos portables .pdf.
-
-Un visor de documentos. Esta es la aplicación que te permite ver e imprimir tus documentos generados por LaTeX.
-
-¿Cómo uso LaTeX?
 También preguntado a veces como: ¿Y esto con qué se come?
 
 Ya que has instalado LaTeX, el siguiente paso es aprender a generar un documento. Son tres las operaciones principales que tienes hacer: editar, compilar, y visualizar el documento.
 
-Editar. El primer paso consiste en usar tu editor seleccionado para generar un archivo, con terminación .tex, que contiene el código en LaTeX describiendo la estructura y el contenido de tu documento. Consulta el curso de LaTeX donde puedes encontrar un ejemplo sencillo y una introducción al lenguaje de LaTeX.
+### Editar
+El primer paso consiste en usar tu editor seleccionado para generar un archivo, con terminación .tex, que contiene el código en LaTeX describiendo la estructura y el contenido de tu documento. Consulta el curso de LaTeX donde puedes encontrar un ejemplo sencillo y una introducción al lenguaje de LaTeX.
 
-Compilar. Compilar es el proceso, realizado por el motor de LaTeX, que convierte tus archivos .tex en documentos con formato .pdf que se pueden imprimir y ver en pantalla.
+### Compilar
+Compilar es el proceso, realizado por el motor de LaTeX, que convierte tus archivos .tex en documentos con formato .pdf que se pueden imprimir y ver en pantalla.
 
-Asegúrate de elegir la opción adecuada para generar directamente documentos .pdf. En TeXnicCenter para Windows, por ejemplo, elige en la barra de herramientas la opción LaTeX => PDF y presiona el botón para compilar. TeXShop en OS X viene ya configurado para generar documentos .pdf, y tiene un botón “Typeset” que inicia la acción de compilar. En otros sistemas asegurate de que el comando usado para compilar sea pdflatex.
+### Visualizar
+Una vez compilado el documento, y si no hubieron errores, puedes visualizar el documento generado por LaTeX.
+---
+# Características de LATEX
 
-Visualizar. Una vez compilado el documento, y si no hubieron errores, puedes visualizar el documento generado por LaTeX. En TeXnicCenter, por ejemplo, hay un botón que te permite iniciar el visualizador de documentos, mientras que en TeXShop el visualizador interno es activado automáticamente cuando la compilación termina sin errores.
+## Transportabilidad:
+los ficheros .tex sólo contienen texto, son de pequeño tamaño y se pueden manipular en cualquier plataforma.
+## Sistematización:
+LATEX se ocupa del formato del documento. El usuario no tiene que preocuparse (si no quiere) de hacer saltos de
+página, justificaciones, sangrías, referencias cruzadas, índice del documento, etc.
+## Versatilidad:
+esencialmente puede hacer cualquier cosa, los límites están en la imaginación del usuario
+## Flexibilidad: 
+permite al usuario crear nuevos comandos y entornos para facilitar la escritura de los documentos. Además, cualquier comando preexistente puede ser modificado y mejorado.
 
-Este ciclo—editar, compilar, visualizar—es el que tienes que repetir durante la producción de tu documento. Normalmente escribes un poco de código, luego compilas y visualizas el resultado para comprobar que obtienes el resultado esperado. Y así sucesivamente escribiendo cada vez un poco más del documento y comprobando los resultados.
+## Actualización
+LATEX es mejorado constantemente de forma altruista. Se crean y mejoran paquetes que son compartidos como software libre.
 
-Durante este proceso, algunas veces el pasó de compilar puede generar algunos errores. Esto ocurre cuando el código que has escrito contiene algún error, y LaTeX no ha podido entender lo que le has querido decir. Si esto ocurre, lee con cuidado la información que LaTeX te da para identificar el problema y corrige los errores en tu código. No ignores los errores y dejes que se acumulen, esto sólo ocasiona frustración y hace que LaTeX comience a comportarse cada vez de manera más y más impredecible. Si esto te da dolores de cabeza, también puedes leer algunos consejos para resolver errores al compilar con LaTeX.
-
-¡Tengo más preguntas!
-Para resolver algunas otras de tus dudas puedes consultar el curso de LaTeX que muestra lo básico que hay que saber para escribir tus primeros documentos en LaTeX. En el resto de este sitio puedes encontrar también tips y sugerencias adicionales para simplificarte la vida la vida con LaTeX.
-
-Consulta también el sitio de CervanTeX, mantenido por un activo grupo de usuarios de TeX hispanohablantes, en el que puedes encontrar una gran cantidad de información y manuales sobre LaTeX. Este grupo también coordina el desarrollo de extensiones de LaTeX para escribir documentos en español, y mantiene una FAQ con una gran colección de las preguntas y respuestas más frecuentes al grupo. Con este cuadro puedes hacer una consulta en la FAQ de CervanTeX usando Google:
-
-Google 
-   
-
-Si la información que necesitas no la puedes encontrar, otra opción es unirte a la lista es-tex donde siempre encontrarás compañeros dispuestos a brindarte su ayuda y resolver las dudas que tengas. Incluso si no tienes una duda en particular es bueno integrarse al grupo pues de sólo leer los mensajes con preguntas de otros se aprende bastante.
-
-En inglés él lugar idóneo para conseguir ayuda es TeX Stack Exchange, donde todos—desde los principiantes hasta los más expertos—pueden encontrar solución a sus problemas. Además existe el TeX Users Group (TUG) que coordina a uno de los grupo más grande de usuarios, mantiene el repositorio CTAN con paquetes para extender las funcionalidades de LaTeX, y administra la FAQ con preguntas y respuestas frecuentes recolectadas por el grupo de usuarios en el Reino Unido.
-
-Dos libros que son referencias clásicas sobre LaTeX son:
-
-L. Lamport, LaTeX: A Document preparation system, 2a. ed., Reading, Addison-Wesley, 1994.
-
-M. Goosens y F. Mittelbach, The LaTeX Companion, 2a. ed., Reading, Addison-Wesley, 2004.
-
-El primero es el manual básico de referencia (por el propio autor de LaTeX), y el segundo discute muchas de las extensiones más comunes.
-
-Finalmente, si tienes dudas, comentarios o sugerencias—ya sea sobre esta guía en particular, o sobre LaTeX en general—puedes dejar aquí un comentario.
 				</textarea>
 				</section>
 			</div>
