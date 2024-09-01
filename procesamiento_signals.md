@@ -8,6 +8,7 @@ Las variables físicas y las magnitudes físicas siempre están presentes en un 
 Medir es asignar un Valor Numérico a una Magnitud concreta (Tensión, Corriente, Potencia, Resistencia…), de acuerdo con una regla predeterminada que esté basada en la experimentación. 
 ### Magnitud
 Una Magnitud es una propiedad física que es susceptible a ser medida.
+***
 En el mundo físico existen 6 tipos de magnitudes:
 - Mecánicas: velocidad, fuerza, presión.
 - Térmicas: Temperatura, cantidad de calor.
