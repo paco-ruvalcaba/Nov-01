@@ -16,7 +16,7 @@
 		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
 		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
 		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
-		<link rel="stylesheet" href="dist/theme/moon.css">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
 		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
 		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
 		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
@@ -28,6 +28,7 @@
 
 	<script src="plugin/math/math.js"></script>
 	<script src="plugin/menu/menu.js"></script>
+
 		<div class="reveal">
 			<div class="slides">
 
@@ -449,8 +450,6 @@ function animate() {
   />
 </div>
 </section>
-
-
 			</div>
 		</div>
 
@@ -463,8 +462,30 @@ function animate() {
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
+				<!-- autoSlide:5000, -->
+				<!-- loop: true, -->
 				hash: true,
 				slideNumber: 'h.v',
+				menu:{
+					side:'left',
+					useTextContentForMissingTitles: true,
+					hideMissingTitles: true,	
+					themes: true,
+					themesPath: 'dist/theme/',
+					custom: [
+						{
+							title: 'Links',
+							icon: '<i class="fa fa-external-link">',
+							<!-- src: 'links.html' -->
+							content:'<h1>Links</h1><ul class="slide-menu-items"><li class="slide-menu-item"><a href="#/transitions">Transitions</a></li><li class="slide-menu-item"><a href="#/13">Code highlighting</a></li></ul>',
+						},
+						{
+							title: 'About',
+							icon: '<i class="fa fa-info">',
+							content: '<p>This slidedeck is created with reveal.js</p>'
+						}
+					]
+				},
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX,RevealMenu ]
 			});
