@@ -195,7 +195,7 @@ Modelo simplificado para las telecomunicaciones</br></br></br>
 [![](fig1.1.svg)](https://excalidraw.com/#json=QfqPsGL-xycwcHWywraqb,mauR0KDrVaEc4TWdTiiL6g)
 
 Ejemplo de comunicacón entre una estación de trabajo y un servidor de una red telefónica pública.
-[![](fig1.1b.svg)](https://excalidraw.com/#json=o3EcWhmq3sXHba0Y24tyi,VAQYv1AbjdgtTTXDh0onUg)
+[![](fig1.1b.svg)](https://excalidraw.com/#json=F2lEXbaeqJpNSO6hsz6V6,vXLXVyqnGMoa6AxOYWH3Ng)
 
 Los elementos claves de este modelo son los siguientes:
 
@@ -210,17 +210,96 @@ Los elementos claves de este modelo son los siguientes:
 |El receptor|Acepta la señal proveniente del sistema de transmisión y la transforma de tal manera que pueda ser manejada por el dispositivo de destino.|
 |El destino|Toma los datos del receptor.|
 
-[![d](tabla1.1.svg)](https://excalidraw.com/#json=fdkv1HFDcCwX2QGgCIvxO,M26CrYM45I6lu0XLrDYTdw)
-
+[![Tabla](tabla1.1.svg)](https://excalidraw.com/#json=mz9dfXyKw76GguVpVwpqq,cC0VuYEahCktcH67JhsJVA)
 ---
-# Comunicación de datos
+# Comunicaciones de datos
 
-[Modelo simplificado para las comunicaciones de datos](https://excalidraw.com/#json=CPAJlg-tiOKeA5QDdxCAJ,dIcqKjf7CFiZbFPFRW5Obw)
+Modelo simplificado para las comunicaciones de datos
+![Modelo simplificado para las comunicaciones de datos](fig1.2.svg)
 
+Para explicar estos conceptos se explica con un ejemplo de la aplicación de correo electrónico.
 
-
+<iframe data-src="ejemplo.html" height="600px" width="90%"></iframe>
 				</textarea>
 				</section>
+<section data-markdown
+	data-separator="^---"
+	data-separator-vertical="^\n"
+	data-separator-notes="^Nota:">
+<textarea data-template>
+# Comunicación de datos a través de redes 
+
+A veces no es práctico que dos dispositvos de comunicaciones se conecten directamente mediante un enlace punto a punto.
+
+Esto es debido a que alguna (o las dos) de las siguientes circunstancias:
+
+- **Los dispositivos están muy alejados**. En este caso no estaría justificado, por ejemplo, utilizar un enlace dedicado entre cada dos dispositivos, que puedan estar separados por miles de kilómetros.
+
+- **Hay un conjunto de dispositivos que necesitan conectarse entre ellos en instantes de tiempo diferentes.** Un ejemplo de esta necesida es la red telefónica mundial, o el conjunto de computadoras pertenecientes a una compañía. Salvo el caso de que el número de dispositivos sea pequeño, no es práctico utilizar un enlace entre cada dos.
+
+La solución a este problema es conectar cada dispositivo a una <mark>RED DE COMUNICACIÓN</mark>.
+
+La Figura relaciona este concepto dentro del modelo de comunicaciones original.
+![](fig1.3.svg)
+
+Sugiere dos grandes categorías en las que se clasifican tradicionalmente las redes:
+1. Redes de área amplia (WAN, Wi- de Area Networks)
+2. Redes de área local (LAN, Local Area Networks).
+
+Nota:
+Recientemente, las diferencias entre estas dos categorías son cada vez más difusas, tanto en términos tecnológicos como de posibles aplicaciones; no obstante, es una forma natural y didáctica de organizar su estudio, por lo que aquí se adoptará dicha clasificación.
+---
+# REDES DE ÁREA AMPLIA
+## (WAN)
+
+Generalmente, se considera como redes de área amplia a todas aquellas que cubren una extensa área geográfica, requieren atravesar rutas de acceso público, y utilizan parcialmente circuitos proporcionados por una entidad proveedora de servicios de telecomunicación.
+
+Típicamente, una WAN consiste en una serie de dispositivos de conmutación interconectados. La transmisión generada por cualquier dispositivo se encaminará a través de estos nodos internos hasta alcanzar el destino. 
+
+A estos nodos (incluyendo a los situados en los contornos) no les concierne el contenido de los datos, al contrario, su función es propor- cionar el servicio de conmutación, necesario para transmitir los datos de nodo en nodo hasta alcanzar su destino final.
+
+Tradicionalmente, las WAN se han implementando usando una de las dos tecnologías siguientes: conmutación de circuitos y conmutación de paquetes. Aunque últimamente, se está empleando como solución la técnica de retransmisión de tramas («frame relay»), así como las redes ATM.
+
+## Conmutación de circuitos
+
+En las redes de conmutación de circuitos se establece a través de los nodos de la red un camino dedica- do a la interconexión de dos estaciones. El camino es una secuencia conectada de enlaces físicos entre nodos. En cada enlace, se dedica un canal lógico a cada conexión. Los datos generados por la estación fuente se transmiten por el camino dedicado tan rápido como se pueda. En cada nodo, los datos de en- trada se encaminan o conmutan por el canal apropiado de salida sin retardos. El ejemplo más ilustrativo de la conmutación de circuitos es la red telefónica.
+
+## Conmutación de paquetes
+
+Un enfoque diferente al anterior es el adoptado en redes de conmutación de paquetes. En este caso, no es necesario hacer una reserva a priori de recursos (capacidad de transmisión) en el camino (o sucesión de nodos). Por el contrario, los datos se envían en secuencias de pequeñas unidades llamadas paquetes. Cada paquete se pasa de nodo a nodo en la red siguiendo algún camino entre la estación origen y la
+
+destino. En cada nodo, el paquete se recibe completamente, se almacena durante un intervalo breve y posteriormente se transmite al siguiente nodo. Las redes de conmutación de paquetes se usan fundamen- talmente para comunicaciones terminal-computador y computador-computador.
+Retransmisión de tramas (Frame Relay)
+La conmutación de paquetes se desarrolló en la época en la que los servicios de transmisión a larga distan- cia sufrían una tasa de error relativamente elevada, comparada con los servicios de los que se dispone actualmente. Por tanto, para compensar esos errores relativamente frecuentes, en los esquemas de conmu- tación de paquetes se realiza un esfuerzo considerable, que se traduce en añadir información redundante en cada paquete, así como la realización de un procesamiento extra, tanto en el destino final como en los nodos intermedios de conmutación, necesario para detectar los errores y en su caso, corregirlos.
+Ahora bien, con los modernos sistemas de comunicaciones de alta velocidad, este esfuerzo adicional es innecesario y contraproducente. Es innecesario ya que la tasa de errores se ha reducido drásticamente y los escasos errores que aparecen se pueden tratar en el sistema final mediante dispositivos que operan por encima del nivel de la lógica dedicada a la conmutación de paquetes. A su vez es contraproducente ya que los bits redundantes significan un desperdicio de parte de la capacidad proporcionada por la red.
+
+La retransmisión de tramas (frame relay) se ha desarrollado teniendo presente las mayores veloci- dades de transmisión que actualmente se disponen, así como de las bajas tasas de error. Mientras que las redes originales de conmutación de paquetes se diseñaron para ofrecer una velocidad de transmisión al usuario final de 64 kbps, las redes «frame relay» están diseñadas para operar eficazmente a velocidades de transmisión de usuario de 2 Mbps. La clave para conseguir estas velocidades reside en eliminar la mayor parte de la información redundante y el procesamiento asociado para el control de errores.
+ATM
+El Modo de Transferencia Asíncrono (ATM, Asynchronous Transfer Mode), a veces denominado como modo de retransmisión de celdas (cell relay), es la culminación de todos los desarrollos en conmuta- ción de circuitos y conmutación de paquetes realizados durante los últimos 25 años.
+ATM se puede interpretar como una evolución de la retransmisión de tramas (frame relay). La dife- rencia más obvia entre frame relay y ATM es que frame relay usa paquetes de longitud variable, llamados tramas, y ATM usa paquetes de longitud fija denominadas celdas. Al igual que en frame relay, ATM introduce poca información adicional para el control de errores, confiando en la inherente robustez del medio de transmisión así como en la lógica adicional localizada en el sistema destino para detectar y corregir errores. Al utilizar paquetes de longitud fija, el esfuerzo adicional de procesamiento se reduce incluso todavía más aquí que en frame relay. El resultado es que ATM se ha diseñado para tra- bajar a velocidades de transmisión del orden de 10 a 100 Mbps, e incluso del orden de Gbps.
+
+
+ATM se puede considerar a su vez como una evolución de la conmutación de circuitos. En la con- mutación de circuitos, se dispone solamente de circuitos a velocidad fija de transmisión entre los siste- mas finales. ATM permite la definición de múltiples canales virtuales con velocidades de transmisión que se definen dinámicamente en el instante en que el canal virtual se crea. Mediante la utilización de celdas de tamaño fijo, ATM es tan eficaz que puede ofrecer un canal a velocidad de transmisión cons- tante aunque esté usando una técnica de conmutación de paquetes. Por lo tanto, ATM es una ampliación de la conmutación de circuitos en la que se ofrecen varios canales, en los que la velocidad de transmi- sión para cada canal se fija dinámicamente según las necesidades.
+RDSI y RDSI de banda ancha
+La sinergia y evolución entre las comunicaciones y las tecnologías de la computación, junto con la cre- ciente demanda de servicios eficaces de captación, procesamiento y diseminación de la información,
+
+
+está desembocando en el desarrollo de sistemas integrados que transmiten y procesan todo tipo de datos. Una consecuencia significativa de esta tendencia ha sido el desarrollo de la Red Digital de Servicios Integrados (RDSI).
+La RDSI se ha diseñado para sustituir a las redes públicas de telecomunicaciones existentes, propor- cionando una gran variedad de servicios. La RDSI se define mediante la estandarización de las interfa- ces de usuario, y se ha implementado como un conjunto de conmutadores digitales y enlaces que pro- porcionan una gran variedad de tipos de tráfico, a la vez que servicios de valor añadido. En la práctica, se trata de múltiples redes, implementadas dentro de los límites nacionales, pero desde el punto de vista del usuario se considera como una única red mundial, uniformemente accesible.
+A pesar de que la RDSI tiene todavía que conseguir la cobertura mundial para la que fue diseñada, está ya en su segunda generación. La primera generación, a veces denominada como RDSI de banda estre- cha, se basa en el uso de canales de 64 kbps como unidad básica de conmutación, presentando una clara orientación hacia la conmutación de circuitos. Técnicamente hablando, la principal contribución de la RDSI de banda estrecha ha sido el «frame relay». La segunda generación, denominada RDSI de banda ancha, proporciona velocidades de transmisión muy elevadas (cientos de Mbps) y tiene una clara orienta- ción hacia la conmutación de paquetes. La contribución técnica principal de la RDSI de banda ancha ha sido el modo de transferencia asíncrono (ATM), también denominado retransmisión de celdas cell relay.
+---
+# REDES DE ÁREA LOCAL
+
+Al igual que las redes de área amplia, una red de área local es una red de comunicaciones que interco- necta varios dispositivos y proporciona un medio para, el intercambio de información entre ellos. No obstante, hay algunas diferencias entre las LAN y las WAN que se enumeran a continuación:
+1. La cobertura de una LAN es pequeña, típicamente un edificio o como mucho un conjunto de edificios próximos. Como se verá más adelante, esta diferencia en cuanto a la cobertura geográ- fica, condicionará la solución técnica finalmente adoptada.
+2. Es común que la LAN sea propiedad de la misma entidad que es propietaria de los dispositivos conectados a la red. En WAN, esto no es tan corriente, o al menos una fracción significativa de recursos de la red son ajenos. Esto tiene dos implicaciones. La primera es que se debe cuidar mucho la elección de la LAN, ya que evidentemente, lleva acarreado una inversión substancial de capital (comparado con los gastos de conexión o alquiler de líneas en redes de área amplia) tanto en la adquisición como en el mantenimiento. Segunda, la responsabilidad de la gestión de la red local recae solamente en el usuario.
+3. Las velocidades de transmisión internas en una LAN son mucho mayores.
+
+
+
+</textarea>
+</section>
+
 			</div>
 		</div>
 
