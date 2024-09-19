@@ -295,8 +295,64 @@ Al igual que las redes de área amplia, una red de área local es una red de com
 2. Es común que la LAN sea propiedad de la misma entidad que es propietaria de los dispositivos conectados a la red. En WAN, esto no es tan corriente, o al menos una fracción significativa de recursos de la red son ajenos. Esto tiene dos implicaciones. La primera es que se debe cuidar mucho la elección de la LAN, ya que evidentemente, lleva acarreado una inversión substancial de capital (comparado con los gastos de conexión o alquiler de líneas en redes de área amplia) tanto en la adquisición como en el mantenimiento. Segunda, la responsabilidad de la gestión de la red local recae solamente en el usuario.
 3. Las velocidades de transmisión internas en una LAN son mucho mayores.
 
+Nota:
+Tradicionalmente, en LAN se utiliza la difusión en lugar de utilizar técnicas de conmutación. En una
+red de difusión, no hay nodos intermedios. En cada estación hay un transmisor/receptor que se comuni-
+ca con las otras estaciones a través de un medio compartido. Una transmisión desde cualquier estación
+se recibirá por todas las otras estaciones. Los datos se transmiten en forma de paquetes. Debido a que el
+medio es compartido, una y sólo una estación en cada instante de tiempo podrá transmitir el paquete.
+Más recientemente, la conmutación también se está utilizando en LAN, fundamentalmente en LAN tipo Ethernet. Otros dos ejemplos de especial relevancia son las LAN ATM, en las que se usa una red ATM como una red de área local, así como los Canales de Fibra. Estas LAN se estudiarán, junto con las basadas en difusión, en la Parte IV de este texto.
+---
+# Protocolos y arquitectura de protocolos
+
+Nota:
+Al intercambio de información entre computadores con el propósito de cooperar se le denomina co- municación entre computadores. De igual manera, al conjunto de computadores que se interconectan a través de una red de comunicaciones, se les denomina red de computadores. Estos términos se extien- den igualmente a cuando alguna de las partes es un terminal, ya que el grado de cooperación en este caso es similar.
+En el estudio de las comunicaciones entre computadores y las redes de computadores, son especial- mente relevantes los dos conceptos siguientes:
+• Los protocolos.
+• Las arquitecturas para comunicaciones entre computadores.
+
+Nota:
+Para la comunicación entre dos entidades situadas en sistemas diferentes es necesario la definición y utilización de un protocolo. Nótese que los términos «entidad» y «sistema» se están usando en un senti- do muy general. Ejemplos de entidades son: los programas de aplicación de los usuarios, las utilidades para transferencia de ficheros, los sistemas de gestión de bases de datos, así como los gestores de correo electrónico y terminales. Ejemplos de sistemas son: los computadores, los terminales y los sensores re- motos. Nótese que en algunos casos la entidad y el sistema en el que se ubica son coincidentes (por ejemplo los terminales). En general, una entidad es cualquier cosa capaz de enviar y recibir informa- ción, y un sistema es un objeto físico que contiene a una o más entidades. Para que dos entidades se comuniquen con éxito, se requiere que «hablen el mismo idioma». Qué se comunica, cómo se comuni- ca, y cuándo se comunica debe seguir una serie de convenciones mutuamente aceptadas por las entida- des involucradas. Este conjunto de convenios se denominan protocolos, que se pueden definir como el conjunto de reglas que gobiernan el intercambio de datos entre dos entidades. Los puntos clave que definen o caracterizan a un protocolo son:
+• La sintaxis: incluye aspectos tales como el formato de los datos y los niveles de señal.
+• La semántica: incluye información de control para la coordinación y el manejo de errores.
+• La temporización: incluye la sintonización de velocidades y secuenciación.
+
+Nota:
+Tras haber introducido el concepto de protocolo, se está en disposición de definir el concepto de arquitectura para las comunicaciones entre computadores. Es claro que debe haber un grado alto de coo- peración entre los computadores. En lugar de implementar toda la lógica para llevar a cabo la comunica- ción en un único módulo, dicha tarea se divide en subtareas, cada una de las cuales se realiza por sepa- rado. A modo de ejemplo, la Figura 1.4 muestra cómo empleando tres módulos, se podría implementar una aplicación de transferencia de fichero. Las tareas 3 y 4 de la lista anterior se podrían realizar por el módulo de transferencia de ficheros. Los dos módulos en ambos sistemas intercambian ficheros y órde- nes. Sin embargo, en vez de exigir que el módulo de transferencia se encargue de los detalles con los que se realiza el envío de datos y órdenes, dichos módulos delegan en los módulos de servicio de comu- nicaciones. Éste se encargará de asegurar que el intercambio de órdenes y datos se realice fiablemente. Entre otras cosas, este módulo realizará la tarea 2. Por lo que a partir de este momento, la naturaleza del intercambio entre los sistemas será independiente de la naturaleza de la red que los interconecta. Por lo
+
+Nota:
+tanto, en vez de implementar la interfaz de red en el módulo de servicio de comunicaciones, tiene senti- do prever un módulo adicional de acceso a la red que lleve a cabo la tarea 1.
+Resumiendo, de los tres módulos de la Figura 1.4, el módulo de transferencia de fichero contiene toda la lógica que es exclusiva de la aplicación para la transferencia de ficheros, tal como la transmisión de una palabra clave, órdenes de fichero, y registros del fichero. Se necesita que esta información se transmita de una forma segura. Sin embargo, esta necesidad de seguridad es compartida por otro tipo de aplicaciones (por ejemplo, el correo electrónico y la transferencia de documentos). Por tanto, estos re- querimientos se localizan en el módulo separado de servicio de comunicaciones de tal forma que puedan ser utilizados por otras aplicaciones. El módulo de servicio de comunicaciones trata de asegurar que los dos computadores estén activos y preparados para la transferencia de datos, así como de seguir la pista de los datos que se intercambian, garantizando su envío. No obstante, estas tareas son independientes del tipo de red que se esté usando. Por tanto, la lógica encargada de tratar con la red se considera en un módulo separado. De esta forma, si se modifica la red que se esté usando, sólo se verá afectado el mó- dulo de acceso a la red.
+Así, en vez de disponer de un solo módulo que realice todas las tareas involucradas en la comunica- ción, se considera una estructura consistente en un conjunto de módulos que realizarán todas las funcio- nes. Esta estructura se denomina arquitectura de protocolos. A continuación, dentro de esta sección se generalizará el ejemplo precedente para presentar una arquitectura de protocolos sencilla, considerando posteriormente ejemplos más realistas y complejos, como son TCP/IP y OSI.
+
+![](fig1.4.svg)
+---
+# Un Modelo de Tres Capas
+
+En términos muy generales, se puede afirmar que las comunicaciones involucran a tres agentes: aplica- ciones, computadores y redes. Un ejemplo de aplicación es la transferencia de ficheros. Este tipo de aplicaciones se ejecutan frecuentemente en computadores que procesan múltiples aplicaciones simultá- neamente. Los computadores se conectan a redes, y los datos a intercambiar se transfieren por la red de un computador a otro. Por tanto, la transferencia de datos desde una aplicación a otra implica en primer lugar la obtención de los mismos y posteriormente hacerlos llegar a la aplicación correspondiente en el computador remoto.
+Por todo lo dicho, parece natural organizar la tarea en tres capas independientes:
+• Capa de acceso a la red.
+• Capa de transporte.
+• Capa de aplicación.
+La capa de acceso a la red está relacionada con el intercambio de datos entre el computador y la red a la que está conectado. El computador emisor debe proporcionar a la red la dirección del destino, de tal forma que la red pueda encaminar los datos al destino apropiado. El computador emisor necesita- rá hacer uso de algunos de los servicios proporcionados por la red, como, por ejemplo, la gestión de
+
+prioridades. Las características del software de esta capa dependerán del tipo de red que se use. Así, se han desarrollado diferentes estándares para conmutación de circuitos, conmutación de paquetes, redes de área local y otros. De esta manera, se pretende separar las funciones que tienen que ver con el acceso a la red en una capa independiente. Haciendo esto, el resto del software de comunicaciones que esté por encima de la capa de acceso a la red no tendrá que ocuparse de las características específicas de la red que se use. El mismo software de las capas superiores funcionará adecuado e independientemente del tipo de red particular a la que el computador esté conectado.
+Independientemente de la naturaleza de las aplicaciones que estén intercambiando datos, es un re- quisito habitual que los datos se intercambien de una manera segura. Esto es, sería deseable estar segu- ros de que todos los datos llegan a la aplicación destino y además llegan en el mismo orden en que fueron enviados. Como se verá, los mecanismos que proporcionan dicha seguridad son independientes de la naturaleza de las aplicaciones. Por tanto, tiene sentido concentrar todos estos procedimientos en una capa común que se comparta por todas las aplicaciones, denominada capa de transporte.
+Finalmente, la capa de aplicación contiene la lógica necesaria para admitir varias aplicaciones de usuario. Para cada tipo distinto de aplicación, como por ejemplo la transferencia de ficheros, se necesita un módulo independiente y con características bien diferenciadas.
 
 
+Las Figuras 1.5 y 1.6 ilustran esta arquitectura sencilla. En la Figura 1.5 se muestran tres computa- dores conectados a una red. Cada computador contiene software en las capas de acceso a la red, de transporte y de aplicación para una o más aplicaciones. Para una comunicación con éxito, cada entidad deberá tener una dirección única. En realidad se necesitan dos niveles de direccionamiento. Cada com- putador en la red debe tener una dirección de red; esto permite a la red proporcionar los datos al compu- tador apropiado. A su vez, cada aplicación en el computador debe tener una dirección que sea única dentro del propio computador, esto permitirá a la capa de transporte proporcionar los datos a la aplica- ción apropiada. Las anteriores direcciones son denominadas puntos de acceso al servicio (SAP, Service Access Point), nótese que cada aplicación accede individualmente a los servicios proporcionados por la capa de transporte.
+
+
+![](fig1.5.svg)
+
+![](fig1.6.svg)
+---
+# La arquitectura de protocolos TCP/IP
+---
+# El modelo OSI
+---
+# Normalizaciones
 </textarea>
 </section>
 
