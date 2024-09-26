@@ -318,7 +318,39 @@ A pesar de que la RDSI tiene todavía que conseguir la cobertura mundial para la
 
 Nota:
 Técnicamente hablando, la principal contribución de la RDSI de banda estrecha ha sido el «frame relay». La segunda generación, denominada RDSI de banda ancha, proporciona velocidades de transmisión muy elevadas (cientos de Mbps) y tiene una clara orienta- ción hacia la conmutación de paquetes. La contribución técnica principal de la RDSI de banda ancha ha sido el modo de transferencia asíncrono (ATM), también denominado retransmisión de celdas cell relay.
----
+</textarea>
+</section>
+
+<section>
+	<section>
+		<h1>Comparacion</h1>
+	</section>
+	<section>
+<div class="r-stack justify-center">
+  <img
+    class="fragment current-visible"
+    data-fragment-index="0"
+    src="comp_a.svg"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="1"
+    src="comp_b.svg"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="2"
+    src="comp_c.svg"
+  />
+</div>
+	</section>
+
+</section>
+<section data-markdown
+	data-separator="^---"
+	data-separator-vertical="^\n"
+	data-separator-notes="^Nota:">
+<textarea data-template>
 # REDES DE ÁREA LOCAL
 
 Al igual que las redes de área amplia, una red de área local es una red de comunicaciones que interco- necta varios dispositivos y proporciona un medio para, el intercambio de información entre ellos. No obstante, hay algunas diferencias entre las LAN y las WAN que se enumeran a continuación:
@@ -329,37 +361,68 @@ Al igual que las redes de área amplia, una red de área local es una red de com
 
 3. Las velocida des de transmisión internas en una LAN son mucho mayores.
 
-Nota:
-Tradicionalmente, en LAN se utiliza la difusión en lugar de utilizar técnicas de conmutación. En una
-red de difusión, no hay nodos intermedios. En cada estación hay un transmisor/receptor que se comuni-
-ca con las otras estaciones a través de un medio compartido. Una transmisión desde cualquier estación
-se recibirá por todas las otras estaciones. Los datos se transmiten en forma de paquetes. Debido a que el
-medio es compartido, una y sólo una estación en cada instante de tiempo podrá transmitir el paquete.
-Más recientemente, la conmutación también se está utilizando en LAN, fundamentalmente en LAN tipo Ethernet. Otros dos ejemplos de especial relevancia son las LAN ATM, en las que se usa una red ATM como una red de área local, así como los Canales de Fibra. Estas LAN se estudiarán, junto con las basadas en difusión, en la Parte IV de este texto.
+
+- Tradicionalmente, en LAN se utiliza la difusión en lugar de utilizar técnicas de conmutación.
+En una red de difusión, no hay nodos intermedios.
+En cada estación hay un transmisor/receptor que se comunica con las otras estaciones a través de un medio compartido.
+- Una transmisión desde cualquier estación se recibirá por todas las otras estaciones. 
+- Los datos se transmiten en forma de paquetes. Debido a que el medio es compartido, una y sólo una estación en cada instante de tiempo podrá transmitir el paquete. Más recientemente, la conmutación también se está utilizando en LAN, fundamentalmente en LAN tipo Ethernet. Otros dos ejemplos de especial relevancia son las LAN ATM, en las que se usa una red ATM como una red de área local, así como los Canales de Fibra. 
 ---
 # Protocolos y arquitectura de protocolos
 
-Nota:
-Al intercambio de información entre computadores con el propósito de cooperar se le denomina co- municación entre computadores. De igual manera, al conjunto de computadores que se interconectan a través de una red de comunicaciones, se les denomina red de computadores. Estos términos se extien- den igualmente a cuando alguna de las partes es un terminal, ya que el grado de cooperación en este caso es similar.
+Considérese, por ejemplo, la transferencia de un fichero entre dos computadores. En este caso, debe haber un camino entre los dos computadores, directo o a través de un red de comunicación, pero además, típicamente se requiere la realización de las siguientes tareas adicionales:
+
+1. El sistema fuente de información debe activar el camino directo de datos, o bien debe propor- cionar a la red de comunicación la identificación del sistema destino deseado.
+
+2. El sistema fuente debe asegurarse de que el destino está preparado para recibir datos.
+
+3. La aplicación de transferencia de fichero en el origen debe asegurarse de que el programa gestor en el destino está preparado para aceptar y almacenar el fichero para el usuario determinado.
+
+4. Si los formatos de los dos ficheros son incompatibles entre ambos sistemas, uno de los dos deberá realizar una operación de adecuación.
+
+Al intercambio de información entre computadores con el propósito de cooperar se le denomina <mark>comunicación entre computadores</mark>.
+
+De igual manera, al conjunto de computadores que se interconectan a través de una red de comunicaciones, se les denomina <mark>red de computadores</mark>. Estos términos se extienden igualmente a cuando alguna de las partes es un terminal, ya que el grado de cooperación en este caso es similar.
+
 En el estudio de las comunicaciones entre computadores y las redes de computadores, son especial- mente relevantes los dos conceptos siguientes:
-• Los protocolos.
-• Las arquitecturas para comunicaciones entre computadores.
+- Los protocolos.
+- Las arquitecturas para comunicaciones entre computadores.
 
 Nota:
-Para la comunicación entre dos entidades situadas en sistemas diferentes es necesario la definición y utilización de un protocolo. Nótese que los términos «entidad» y «sistema» se están usando en un senti- do muy general. Ejemplos de entidades son: los programas de aplicación de los usuarios, las utilidades para transferencia de ficheros, los sistemas de gestión de bases de datos, así como los gestores de correo electrónico y terminales. Ejemplos de sistemas son: los computadores, los terminales y los sensores re- motos. Nótese que en algunos casos la entidad y el sistema en el que se ubica son coincidentes (por ejemplo los terminales). En general, una entidad es cualquier cosa capaz de enviar y recibir informa- ción, y un sistema es un objeto físico que contiene a una o más entidades. Para que dos entidades se comuniquen con éxito, se requiere que «hablen el mismo idioma». Qué se comunica, cómo se comuni- ca, y cuándo se comunica debe seguir una serie de convenciones mutuamente aceptadas por las entida- des involucradas. Este conjunto de convenios se denominan protocolos, que se pueden definir como el conjunto de reglas que gobiernan el intercambio de datos entre dos entidades. Los puntos clave que definen o caracterizan a un protocolo son:
-• La sintaxis: incluye aspectos tales como el formato de los datos y los niveles de señal.
-• La semántica: incluye información de control para la coordinación y el manejo de errores.
-• La temporización: incluye la sintonización de velocidades y secuenciación.
+Para la comunicación entre dos entidades situadas en sistemas diferentes es necesario la definición y utilización de un protocolo. 
+
+Nótese que los términos «entidad» y «sistema» se están usando en un sentido muy general. 
+
+Ejemplos de entidades son: los programas de aplicación de los usuarios, las utilidades para transferencia de ficheros, los sistemas de gestión de bases de datos, así como los gestores de correo electrónico y terminales. 
+
+Ejemplos de sistemas son: los computadores, los terminales y los sensores re- motos. 
+
+Nótese que en algunos casos la entidad y el sistema en el que se ubica son coincidentes (por ejemplo los terminales). En general, una entidad es cualquier cosa capaz de enviar y recibir informa- ción, y un sistema es un objeto físico que contiene a una o más entidades. 
+
+Para que dos entidades se comuniquen con éxito, se requiere que «hablen el mismo idioma». Qué se comunica, cómo se comunica, y cuándo se comunica debe seguir una serie de convenciones mutuamente aceptadas por las entidades involucradas. 
+
+<mark>Este conjunto de convenios se denominan protocolos</mark>, que se pueden definir como el conjunto de reglas que gobiernan el intercambio de datos entre dos entidades. Los puntos clave que definen o caracterizan a un protocolo son:
+
+- La sintaxis: incluye aspectos tales como el formato de los datos y los niveles de señal.
+- La semántica: incluye información de control para la coordinación y el manejo de errores.
+- La temporización: incluye la sintonización de velocidades y secuenciación.
 
 Nota:
-Tras haber introducido el concepto de protocolo, se está en disposición de definir el concepto de arquitectura para las comunicaciones entre computadores. Es claro que debe haber un grado alto de coo- peración entre los computadores. En lugar de implementar toda la lógica para llevar a cabo la comunica- ción en un único módulo, dicha tarea se divide en subtareas, cada una de las cuales se realiza por sepa- rado. A modo de ejemplo, la Figura 1.4 muestra cómo empleando tres módulos, se podría implementar una aplicación de transferencia de fichero. Las tareas 3 y 4 de la lista anterior se podrían realizar por el módulo de transferencia de ficheros. Los dos módulos en ambos sistemas intercambian ficheros y órde- nes. Sin embargo, en vez de exigir que el módulo de transferencia se encargue de los detalles con los que se realiza el envío de datos y órdenes, dichos módulos delegan en los módulos de servicio de comu- nicaciones. Éste se encargará de asegurar que el intercambio de órdenes y datos se realice fiablemente. Entre otras cosas, este módulo realizará la tarea 2. Por lo que a partir de este momento, la naturaleza del intercambio entre los sistemas será independiente de la naturaleza de la red que los interconecta. Por lo
+Tras haber introducido el concepto de protocolo, se está en disposición de definir el concepto de arquitectura para las comunicaciones entre computadores.
+
+Es claro que debe haber un grado alto de coo- peración entre los computadores. En lugar de implementar toda la lógica para llevar a cabo la comunica- ción en un único módulo, dicha tarea se divide en subtareas, cada una de las cuales se realiza por sepa- rado. 
+
+A modo de ejemplo, la Figura muestra cómo empleando tres módulos, se podría implementar una aplicación de transferencia de fichero.
+
+![](fig1.4.svg)
+
+Las tareas 3 y 4 de la lista anterior se podrían realizar por el módulo de transferencia de ficheros. Los dos módulos en ambos sistemas intercambian ficheros y órde- nes. Sin embargo, en vez de exigir que el módulo de transferencia se encargue de los detalles con los que se realiza el envío de datos y órdenes, dichos módulos delegan en los módulos de servicio de comu- nicaciones. Éste se encargará de asegurar que el intercambio de órdenes y datos se realice fiablemente. Entre otras cosas, este módulo realizará la tarea 2. Por lo que a partir de este momento, la naturaleza del intercambio entre los sistemas será independiente de la naturaleza de la red que los interconecta. Por lo
 
 Nota:
 tanto, en vez de implementar la interfaz de red en el módulo de servicio de comunicaciones, tiene senti- do prever un módulo adicional de acceso a la red que lleve a cabo la tarea 1.
 Resumiendo, de los tres módulos de la Figura 1.4, el módulo de transferencia de fichero contiene toda la lógica que es exclusiva de la aplicación para la transferencia de ficheros, tal como la transmisión de una palabra clave, órdenes de fichero, y registros del fichero. Se necesita que esta información se transmita de una forma segura. Sin embargo, esta necesidad de seguridad es compartida por otro tipo de aplicaciones (por ejemplo, el correo electrónico y la transferencia de documentos). Por tanto, estos re- querimientos se localizan en el módulo separado de servicio de comunicaciones de tal forma que puedan ser utilizados por otras aplicaciones. El módulo de servicio de comunicaciones trata de asegurar que los dos computadores estén activos y preparados para la transferencia de datos, así como de seguir la pista de los datos que se intercambian, garantizando su envío. No obstante, estas tareas son independientes del tipo de red que se esté usando. Por tanto, la lógica encargada de tratar con la red se considera en un módulo separado. De esta forma, si se modifica la red que se esté usando, sólo se verá afectado el mó- dulo de acceso a la red.
 Así, en vez de disponer de un solo módulo que realice todas las tareas involucradas en la comunica- ción, se considera una estructura consistente en un conjunto de módulos que realizarán todas las funcio- nes. Esta estructura se denomina arquitectura de protocolos. A continuación, dentro de esta sección se generalizará el ejemplo precedente para presentar una arquitectura de protocolos sencilla, considerando posteriormente ejemplos más realistas y complejos, como son TCP/IP y OSI.
 
-![](fig1.4.svg)
 ---
 # Un Modelo de Tres Capas
 
