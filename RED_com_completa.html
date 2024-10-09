@@ -166,7 +166,6 @@ Por tanto, para compensar esos errores relativamente frecuentes, en los esquemas
 
 Ahora bien, con los modernos sistemas de comunicaciones de alta velocidad, este esfuerzo adicional es innecesario y contraproducente. Es innecesario ya que la tasa de errores se ha reducido drásticamente y los escasos errores que aparecen se pueden tratar en el sistema final mediante dispositivos que operan por encima del nivel de la lógica dedicada a la conmutación de paquetes. A su vez es contraproducente ya que los bits redundantes significan un desperdicio de parte de la capacidad proporcionada por la red.
 
-Nota:
 La retransmisión de tramas (frame relay) se ha desarrollado teniendo presente las mayores veloci- dades de transmisión que actualmente se disponen, así como de las bajas tasas de error. Mientras que las redes originales de conmutación de paquetes se diseñaron para ofrecer una velocidad de transmisión al usuario final de 64 kbps, las redes «frame relay» están diseñadas para operar eficazmente a velocidades de transmisión de usuario de 2 Mbps. La clave para conseguir estas velocidades reside en eliminar la mayor parte de la información redundante y el procesamiento asociado para el control de errores.
 
 ## ATM
@@ -180,8 +179,13 @@ Al igual que en frame relay, ATM introduce poca información adicional para el c
 
 Al utilizar paquetes de longitud fija, el esfuerzo adicional de procesamiento se reduce incluso todavía más aquí que en frame relay. El resultado es que ATM se ha diseñado para tra- bajar a velocidades de transmisión del orden de 10 a 100 Mbps, e incluso del orden de Gbps.
 
-Nota:
-ATM se puede considerar a su vez como una evolución de la conmutación de circuitos. En la con- mutación de circuitos, se dispone solamente de circuitos a velocidad fija de transmisión entre los siste- mas finales. ATM permite la definición de múltiples canales virtuales con velocidades de transmisión que se definen dinámicamente en el instante en que el canal virtual se crea. Mediante la utilización de celdas de tamaño fijo, ATM es tan eficaz que puede ofrecer un canal a velocidad de transmisión cons- tante aunque esté usando una técnica de conmutación de paquetes. Por lo tanto, ATM es una ampliación de la conmutación de circuitos en la que se ofrecen varios canales, en los que la velocidad de transmi- sión para cada canal se fija dinámicamente según las necesidades.
+ATM se puede considerar a su vez como una evolución de la conmutación de circuitos. En la con- mutación de circuitos, se dispone solamente de circuitos a velocidad fija de transmisión entre los siste- mas finales. 
+
+ATM permite la definición de múltiples canales virtuales con velocidades de transmisión que se definen dinámicamente en el instante en que el canal virtual se crea. 
+
+Mediante la utilización de celdas de tamaño fijo, ATM es tan eficaz que puede ofrecer un canal a velocidad de transmisión cons- tante aunque esté usando una técnica de conmutación de paquetes. 
+
+Por lo tanto, ATM es una ampliación de la conmutación de circuitos en la que se ofrecen varios canales, en los que la velocidad de transmi- sión para cada canal se fija dinámicamente según las necesidades.
 
 ## RDSI y RDSI de banda ancha
 ![](RDSI.png)
@@ -191,12 +195,14 @@ La sinergia y evolución entre las comunicaciones y las tecnologías de la compu
 La RDSI se ha diseñado para sustituir a las redes públicas de telecomunicaciones existentes, proporcionando una gran variedad de servicios. 
 
 La RDSI se define mediante la estandarización de las interfaces de usuario, y se ha implementado como un conjunto de conmutadores digitales y enlaces que proporcionan una gran variedad de tipos de tráfico, a la vez que servicios de valor añadido. 
+
 En la práctica, se trata de múltiples redes, implementadas dentro de los límites nacionales, pero desde el punto de vista del usuario se considera como una única red mundial, uniformemente accesible.
 
 A pesar de que la RDSI tiene todavía que conseguir la cobertura mundial para la que fue diseñada, está ya en su segunda generación. La primera generación, a veces denominada como RDSI de banda estre- cha, se basa en el uso de canales de 64 kbps como unidad básica de conmutación, presentando una clara orientación hacia la conmutación de circuitos. 
 
-Nota:
-Técnicamente hablando, la principal contribución de la RDSI de banda estrecha ha sido el «frame relay». La segunda generación, denominada RDSI de banda ancha, proporciona velocidades de transmisión muy elevadas (cientos de Mbps) y tiene una clara orienta- ción hacia la conmutación de paquetes. La contribución técnica principal de la RDSI de banda ancha ha sido el modo de transferencia asíncrono (ATM), también denominado retransmisión de celdas cell relay.
+Técnicamente hablando, la principal contribución de la RDSI de banda estrecha ha sido el «frame relay». La segunda generación, denominada RDSI de banda ancha, proporciona velocidades de transmisión muy elevadas (cientos de Mbps) y tiene una clara orientación hacia la conmutación de paquetes. 
+
+La contribución técnica principal de la RDSI de banda ancha ha sido el modo de transferencia asíncrono (ATM), también denominado retransmisión de celdas cell relay.
 </textarea>
 </section>
 
