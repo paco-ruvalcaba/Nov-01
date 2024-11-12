@@ -382,7 +382,6 @@ A su vez, cada aplicación en el computador debe tener una dirección que sea ú
 
 Las anteriores direcciones son denominadas puntos de acceso al servicio (SAP, Service Access Point), nótese que cada aplicación accede individualmente a los servicios proporcionados por la capa de transporte.
 
-Nota:
 Aquí se muestra cómo se comunican, mediante un protocolo, los módulos en el mismo nivel de computadores diferentes. 
 ![](fig1.6.svg)
 
@@ -416,17 +415,59 @@ Como anteriormente, esta operación requiere el uso de información de control. 
 
 - Solicitud de recursos: el protocolo de acceso a la red puede pedir a la red que realice algunas funciones, como por ejemplo gestionar prioridades.
 
-Nota:
 En la Figura 1.8 se conjugan todos estos conceptos, mostrando la interacción entre los módulos para transferir un bloque de datos. Supongamos que el módulo de transferencia de ficheros en el computador X está transfiriendo registro a registro al computador Y. Cada registro se pasa al módulo de la capa de transporte. Se puede describir esta acción como si se tratase de una orden o una llamada a un procedimiento. Posibles argumentos de este procedimiento serán la dirección del destino, el SAP destino y el registro del fichero. La capa de transporte añade el punto de acceso al servicio e información de control adicional, que se agregará al registro para formar la PDU de transporte. Ésta se pasa a la capa inferior de acceso a la red mediante la llamada a otro procedimiento. En este caso, los argumentos para esta llamada serán la dirección del computador destino y la unidad de datos del protocolo de transporte. La capa de acceso a la red usará esta información para construir la PDU de red. La PDU de transporte es el campo de datos de la PDU de red, y su cabecera contendrá información relativa a las direcciones origen y destino. Nótese que la cabecera de transporte no es «visible» al nivel de acceso a la red; en otras palabras, a dicho nivel no le concierne el contenido concreto de la PDU de transporte.
 
 ![](fig1.8.svg)
 
-Nota:
 La red acepta la PDU de transporte de X y la transmite a Y. El módulo de acceso a la red en Y recibe la PDU, elimina la cabecera y pasa la PDU de transporte adjunta al módulo de la capa de transporte de Y. La capa de transporte examina la cabecera de la unidad de datos del protocolo de transporte y en función del campo en la cabecera que contenga el SAP, entregará el registro correspondiente a la aplicación pertinente, en este caso al módulo de transferencia de ficheros de Y.
 ---
 # La arquitectura de protocolos TCP/IP
+
+Hay dos arquitecturas que han sido determinantes y básicas en el desarrollo de los estándares de comu- nicación: el conjunto de protocolos TCP/IP y el modelo de referencia de OSI. TCP/IP es la arquitectura más adoptada para la interconexión de sistemas, mientras que OSI se ha convertido en el modelo están- dar para clasificar las funciones de comunicación. En esta sección, se incluye un breve resumen de las dos arquitecturas, aunque posteriormente se desarrollarán con más detalle en el Capítulo 2.
+TCP/IP es resultado de la investigación y desarrollo llevados a cabo en la red experimental de con- mutación de paquetes ARPANET, financiada por la Agencia de Proyectos de Investigación Avanzada para la Defensa (DARPA, Defense Advanced Research Projects Agency), y se denomina globalmente como la familia de protocolos TCP/IP. Esta familia consiste en un extensa colección de protocolos que se han erigido como estándares de Internet.
+Al contrario que en OSI, no hay un modelo oficial de referencia TCP/IP. No obstante, basándose en los protocolos estándar que se han desarrollado, todas las tareas involucradas en la comunicación se puede organizar en cinco capas relativamente independientes:
+• Capa de aplicación.
+• Capa origen-destino o de transporte.
+• Capa internet.
+• Capa de acceso a la red.
+• Capa física.
+La capa física define la interfaz física entre el dispositivo de transmisión de datos (por ejemplo, la estación de trabajo o el computador) y el medio de transmisión o red. Esta capa se encarga de la especi- ficación de las características del medio de transmisión, la naturaleza de las señales, la velocidad de datos, y cuestiones afines.
+La capa de acceso a la red es responsable del intercambio de datos entre el sistema final y la red a
+la cual se está conectado. El emisor debe proporcionar a la red la dirección del destino, de tal manera
+que la red pueda encaminar los datos hasta el destino apropiado. El emisor puede requerir ciertos servi-
+cios, como por ejemplo solicitar una determinada prioridad, que pueden ser proporcionados por el nivel
+de red. El software en particular que se use en esta capa dependerá del tipo de red que se disponga; se
+han desarrollado diversos estándares para conmutación de circuitos, conmutación de paquetes (por
+ejemplo, X.25), redes de área local (por ejemplo, Ethernet), entre otros.
+
+La capa de acceso a la red está relacionada con el acceso y encaminamiento de los datos a través de la red. En situaciones en las que los dos dispositivos estén conectados a redes diferentes, se necesitarán una serie de procedimientos que permitan que los datos atraviesen las distintas redes interconectadas. Ésta es la función de la capa Internet. El protocolo internet (IP, Internet Protocol) se utiliza en esta capa para ofrecer el servicio de encaminamiento a través de varias redes. Este protocolo se implementa tanto en los sistemas finales como en los «routers>> intermedios. Un «router>> es un dispositivo con capacidad de procesamiento que conecta dos redes y cuya función principal es retransmitir datos desde una red a otra siguiendo la ruta adecuada para alcanzar al destino.
+
+Independientemente de la naturaleza de las aplicaciones que están intercambiando datos, es usual re- querir que los datos se intercambien de forma segura. Esto es, sería deseable asegurar que todos los datos llegan a la aplicación destino y en el mismo orden en el que fueron enviados. Los procedimientos que garantizan una transmisión segura están localizados en la capa origen-destino, o capa de transporte. El protocolo TCP (Transmission Control Protocol) es el más utilizado para proporcionar esta funcionalidad. Finalmente, la capa de aplicación contiene la lógica necesaria para posibilitar las distintas aplica- ciones de usuario. Para cada tipo particular de aplicación, como por ejemplo la transferencia de ficheros, se necesitará un módulo bien diferenciado.
+
+La Figura 1.9 muestra como se implementan los protocolos TCP/IP en los sistemas finales, a la vez que relaciona la arquitectura con el modelo para las comunicaciones de la Figura 1.la. Nótese que las capas física y de acceso a la red proporcionan la interacción entre el sistema final y la red, mientras que las capas de aplicación y transporte albergan los protocolos denominados «extremo a extremo», ya que facilitan la interacción entre los dos sistemas finales. La capa internet tiene algo de las dos aproximaciones anteriores. En esta capa, los sistemas origen y destino proporcionan a la red la información necesaria para realizar el encaminamiento, pero a la vez, deben proporcionar algunas funciones adicionales de intercam- bio entre los dos sistemas finales; estos aspectos se desarrollarán posteriormente en los Capítulos 15 y 16.
+
+![](fig1.9.svg)
 ---
 # El modelo OSI
+
+El modelo de OSI (Open Systems Interconection) se desarrolló por la Organización Internacional de Estandarización ISO (International Organization for Standarization) como una arquitectura para comunicaciones entre computadores, con el objetivo de ser el marco de referencia en el desarrollo de protoco- los estándares. OSI considera siete capas:
+
+• Aplicación.
+• Presentación.
+• Sesión.
+• Transporte.
+• Red.
+• Enlace de datos.
+• Física.
+
+En la Figura 1.10 se muestra el modelo OSI y se definen brevemente las funciones que se realizan en cada capa. La intención del modelo OSI es que los protocolos se desarrollen de forma tal que reali- cen las funciones de cada una de las capas.
+
+![](fig1.10.svg)
+
+Los diseñadores de OSI consideraron que este modelo y los protocolos asociados llegarían a domi- nar las comunicaciones entre computadores, reemplazando eventualmente las implementaciones particu- lares de protocolos, así como a modelos rivales tales como TCP/IP. Sin embargo, esto no ha sido así. Aunque se han desarrollado muchos protocolos de utilidad dentro del contexto de OSI, el modelo de las siete capas en su conjunto no ha prosperado. Por el contrario, la arquitectura TCP/IP se ha erigido como dominante. Por tanto, en este libro se pondrá mayor énfasis en TCP/IP.
+La Figura 1.11 muestra las capas de las arquitecturas OSI y TCP/IP, indicando la posible correspon- dencia en términos de funcionalidad entre ambas. La misma figura sugiere a su vez formas de imple- mentar las diferentes capas.
+
+![](fig1.11.svg)
 ---
 # Normalizaciones
 </textarea>
